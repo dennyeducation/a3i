@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html class="dark" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>LSP A3I - Profil Lembaga</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f2b90d",
+                        "background-light": "#0a0a0a",
+                        "background-dark": "#0a0a0a",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        @layer base {
+            body {
+                @apply font-display bg-[#0a0a0a] text-slate-300;
+            }
+        }
+        .org-connector-v {
+            @apply w-[1px] bg-primary/40 h-8 mx-auto;
+        }
+        .org-connector-h {
+            @apply h-[1px] bg-primary/40 absolute top-0;
+        }
+        .container {
+            @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+        }
+    </style>
+</head>
+<body class="antialiased">
+<header class="sticky top-0 z-50 bg-[#0a0a0a]/95 border-b border-white/5 backdrop-blur-md">
+<nav class="container h-20 flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="w-11 h-11 bg-primary flex items-center justify-center rounded-sm">
+<span class="material-icons text-[#0a0a0a] text-2xl font-bold">verified_user</span>
+</div>
+<div class="flex flex-col">
+<h1 class="text-xl font-extrabold tracking-tighter text-white leading-none">LSP A3I</h1>
+<p class="text-[9px] uppercase tracking-[0.3em] text-primary font-bold mt-1">Certification Excellence</p>
+</div>
+</div>
+<div class="hidden md:flex items-center space-x-10">
+<a class="text-[13px] font-bold uppercase tracking-widest text-slate-400 hover:text-primary transition-colors" href="#">Beranda</a>
+<a class="text-[13px] font-bold uppercase tracking-widest text-primary" href="#">Profil</a>
+<a class="text-[13px] font-bold uppercase tracking-widest text-slate-400 hover:text-primary transition-colors" href="#">Skema</a>
+<a class="text-[13px] font-bold uppercase tracking-widest text-slate-400 hover:text-primary transition-colors" href="#">TUK</a>
+<a class="ml-4 px-6 py-2.5 bg-primary text-[#0a0a0a] font-bold text-[12px] uppercase tracking-wider hover:bg-white transition-all" href="#">Portal Sertifikasi</a>
+</div>
+</nav>
+</header>
+<main>
+<section class="relative pt-24 pb-20 border-b border-white/5">
+<div class="container relative">
+<div class="max-w-4xl">
+<div class="flex items-center gap-3 mb-6">
+<div class="h-[1px] w-12 bg-primary"></div>
+<span class="text-primary text-xs font-bold uppercase tracking-[0.3em]">Profil Lembaga</span>
+</div>
+<h2 class="text-5xl md:text-7xl font-extrabold text-white mb-10 leading-[1.1] tracking-tight">
+                    Membangun Standar <br/>
+<span class="text-primary italic">Profesionalisme</span> Indonesia.
+                </h2>
+<p class="text-xl text-slate-400 leading-relaxed max-w-2xl font-light">
+                    Lembaga Sertifikasi Profesi A3I adalah institusi independen yang berkomitmen untuk meningkatkan daya saing tenaga kerja melalui sistem sertifikasi kompetensi yang kredibel dan diakui secara nasional.
+                </p>
+</div>
+</div>
+</section>
+<section class="py-24 border-b border-white/5">
+<div class="container">
+<div class="grid lg:grid-cols-2 gap-20 items-center">
+<div class="space-y-8">
+<h3 class="text-3xl font-bold text-white tracking-tight">Sejarah &amp; Filosofi</h3>
+<div class="space-y-6">
+<p class="text-slate-400 leading-loose text-base">
+                            Lembaga Sertifikasi Profesi A3I didirikan atas inisiasi para pakar industri di Bekasi dengan tujuan menjawab tantangan globalisasi ekonomi. Sebagai lembaga yang telah memperoleh lisensi resmi dari <span class="text-white font-semibold">Badan Nasional Sertifikasi Profesi (BNSP)</span>, kami menjalankan tugas utama melaksanakan sertifikasi kompetensi kerja di berbagai sektor strategis.
+                        </p>
+<p class="text-slate-400 leading-loose text-base">
+                            Berlokasi strategis di pusat industri Bekasi, LSP A3I hadir sebagai jembatan antara kebutuhan industri dengan ketersediaan sumber daya manusia yang kompeten. Kami percaya bahwa pengakuan formal atas keahlian seseorang adalah kunci pembuka pintu kesempatan karir yang lebih luas.
+                        </p>
+</div>
+<div class="grid grid-cols-2 gap-8 pt-6">
+<div>
+<p class="text-4xl font-extrabold text-white mb-1">BNSP</p>
+<p class="text-[10px] text-primary uppercase font-bold tracking-widest">Lisensi Resmi</p>
+</div>
+<div>
+<p class="text-4xl font-extrabold text-white mb-1">1000+</p>
+<p class="text-[10px] text-primary uppercase font-bold tracking-widest">Sertifikat Terbit</p>
+</div>
+</div>
+</div>
+<div class="relative">
+<div class="absolute inset-0 border border-primary/20 translate-x-4 translate-y-4 -z-10"></div>
+<div class="bg-zinc-900 overflow-hidden">
+<img alt="LSP A3I Office" class="w-full aspect-[4/3] object-cover opacity-80" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSK7hNNEKXbxnl_OVbvAnObfJdXOIPkS0RrQ8t5Nt0cVjCNPeqoZ0XTyAptQcAMZkqkNjwdKdKIQ4qe-cqtBFvUXE_KxzkC954HtjC0Nc5r5M09-7-tUG-h4FmV53ReOEWwl19g3GKIU5zyH_vCujQ-ikcfHeBW6yvUTUFPjLxZihKhv6i1JNkNNfHedBB84g7-iBCUy6uo_ScpbkEGS6vEjhvOKmjK6muVp-E8eBGlgJoQWQj6XhgllQgQALx0IkkQV_Llh71dfMw"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 bg-zinc-950/50 border-b border-white/5">
+<div class="container">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+<div class="max-w-xl">
+<h3 class="text-3xl font-bold text-white tracking-tight mb-4">Visi &amp; Misi</h3>
+<p class="text-slate-400">Komitmen kami dalam menjaga kualitas dan integritas sertifikasi profesi di Indonesia.</p>
+</div>
+<div class="h-[1px] flex-grow bg-white/10 ml-8 hidden md:block"></div>
+</div>
+<div class="grid md:grid-cols-3 gap-1">
+<div class="md:col-span-1 p-12 bg-zinc-900 border border-white/5">
+<div class="mb-10 text-primary">
+<span class="material-symbols-outlined text-5xl">visibility</span>
+</div>
+<h4 class="text-xl font-bold text-white mb-6 uppercase tracking-wider">Visi Utama</h4>
+<p class="text-slate-400 leading-loose italic">
+                        "Menjadi Lembaga Sertifikasi Profesi yang unggul, terpercaya, dan menjadi rujukan utama dalam penjaminan kompetensi tenaga kerja berstandar global."
+                    </p>
+</div>
+<div class="md:col-span-2 grid sm:grid-cols-2 gap-1">
+<div class="p-10 bg-zinc-900/40 border border-white/5">
+<div class="w-8 h-8 rounded-full border border-primary/30 flex items-center justify-center text-primary mb-6">
+<span class="text-xs font-bold">01</span>
+</div>
+<h4 class="text-lg font-bold text-white mb-4">Penjaminan Mutu</h4>
+<p class="text-slate-500 text-sm leading-relaxed">
+                            Melaksanakan uji kompetensi yang fair, transparan, dan akuntabel sesuai dengan standar operasional prosedur BNSP.
+                        </p>
+</div>
+<div class="p-10 bg-zinc-900/40 border border-white/5">
+<div class="w-8 h-8 rounded-full border border-primary/30 flex items-center justify-center text-primary mb-6">
+<span class="text-xs font-bold">02</span>
+</div>
+<h4 class="text-lg font-bold text-white mb-4">Sinergi Industri</h4>
+<p class="text-slate-500 text-sm leading-relaxed">
+                            Membangun kemitraan strategis dengan dunia usaha dan industri (DUDI) untuk memastikan relevansi skema sertifikasi.
+                        </p>
+</div>
+<div class="p-10 bg-zinc-900/40 border border-white/5">
+<div class="w-8 h-8 rounded-full border border-primary/30 flex items-center justify-center text-primary mb-6">
+<span class="text-xs font-bold">03</span>
+</div>
+<h4 class="text-lg font-bold text-white mb-4">Inovasi Berkelanjutan</h4>
+<p class="text-slate-500 text-sm leading-relaxed">
+                            Terus melakukan inovasi dan peningkatan kapasitas infrastruktur sertifikasi serta pengembangan SDM pengelola.
+                        </p>
+</div>
+<div class="p-10 bg-zinc-900/40 border border-white/5">
+<div class="w-8 h-8 rounded-full border border-primary/30 flex items-center justify-center text-primary mb-6">
+<span class="text-xs font-bold">04</span>
+</div>
+<h4 class="text-lg font-bold text-white mb-4">Etika Profesi</h4>
+<p class="text-slate-500 text-sm leading-relaxed">
+                            Menjunjung tinggi integritas dalam seluruh proses bisnis untuk menjaga kepercayaan seluruh pemangku kepentingan.
+                        </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 border-b border-white/5">
+<div class="container">
+<div class="text-center mb-20">
+<p class="text-primary text-[10px] font-bold uppercase tracking-[0.4em] mb-4">Governance</p>
+<h3 class="text-4xl font-extrabold text-white tracking-tight">Struktur Organisasi</h3>
+<div class="w-16 h-[2px] bg-primary mx-auto mt-6"></div>
+</div>
+<div class="max-w-4xl mx-auto overflow-x-auto pb-10">
+<div class="min-w-[700px] flex flex-col items-center">
+<div class="flex flex-col items-center">
+<div class="p-5 border border-primary bg-primary/5 min-w-[240px] text-center">
+<p class="text-primary text-[9px] font-bold uppercase tracking-widest mb-1">Dewan Pengarah</p>
+<h5 class="text-base font-bold text-white">Priyono</h5>
+</div>
+<div class="org-connector-v"></div>
+</div>
+<div class="flex flex-col items-center">
+<div class="p-5 border border-primary bg-primary/5 min-w-[240px] text-center">
+<p class="text-primary text-[9px] font-bold uppercase tracking-widest mb-1">Ketua LSP</p>
+<h5 class="text-base font-bold text-white">I Made Karmayoga</h5>
+</div>
+<div class="org-connector-v h-10"></div>
+</div>
+<div class="w-full relative px-10">
+<div class="org-connector-h left-[12.5%] right-[12.5%]"></div>
+<div class="grid grid-cols-4 gap-4 pt-8">
+<div class="flex flex-col items-center">
+<div class="org-connector-v absolute top-0"></div>
+<div class="p-4 border border-white/10 bg-zinc-900 w-full text-center">
+<p class="text-slate-500 text-[8px] font-bold uppercase tracking-widest mb-1">Manajer Sertifikasi</p>
+<h5 class="text-xs font-bold text-white">Dewi Lestari</h5>
+</div>
+</div>
+<div class="flex flex-col items-center">
+<div class="org-connector-v absolute top-0"></div>
+<div class="p-4 border border-white/10 bg-zinc-900 w-full text-center">
+<p class="text-slate-500 text-[8px] font-bold uppercase tracking-widest mb-1">Manajer Mutu</p>
+<h5 class="text-xs font-bold text-white">Bambang S.</h5>
+</div>
+</div>
+<div class="flex flex-col items-center">
+<div class="org-connector-v absolute top-0"></div>
+<div class="p-4 border border-white/10 bg-zinc-900 w-full text-center">
+<p class="text-slate-500 text-[8px] font-bold uppercase tracking-widest mb-1">Manajer Adm &amp; Keu</p>
+<h5 class="text-xs font-bold text-white">Siti Aminah</h5>
+</div>
+</div>
+<div class="flex flex-col items-center">
+<div class="org-connector-v absolute top-0"></div>
+<div class="p-4 border border-white/10 bg-zinc-900 w-full text-center">
+<p class="text-slate-500 text-[8px] font-bold uppercase tracking-widest mb-1">Komite Teknis</p>
+<h5 class="text-xs font-bold text-white">Agus Wahyudi</h5>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-16 text-center">
+<p class="text-slate-500 text-sm italic font-light max-w-xl mx-auto">
+                    "LSP A3I didukung oleh tim ahli yang berdedikasi tinggi dan memiliki sertifikasi sebagai Asesor Kompetensi yang kredibel di bidangnya masing-masing."
+                </p>
+</div>
+</div>
+</section>
+<section class="py-24">
+<div class="container">
+<div class="grid md:grid-cols-2 gap-16 items-center">
+<div>
+<h3 class="text-3xl font-bold text-white mb-8">Hubungi Kantor Pusat</h3>
+<div class="space-y-6">
+<div class="flex items-start gap-5">
+<span class="material-icons text-primary text-xl">location_on</span>
+<div>
+<h4 class="text-white font-bold text-sm uppercase tracking-wider mb-1">Alamat</h4>
+<p class="text-slate-400 text-base">Jl. Jenderal Sudirman No. 123, Bekasi Selatan, Jawa Barat 17148</p>
+</div>
+</div>
+<div class="flex items-start gap-5">
+<span class="material-icons text-primary text-xl">phone</span>
+<div>
+<h4 class="text-white font-bold text-sm uppercase tracking-wider mb-1">Telepon</h4>
+<p class="text-slate-400 text-base">+62 21 8888 9999</p>
+</div>
+</div>
+<div class="flex items-start gap-5">
+<span class="material-icons text-primary text-xl">email</span>
+<div>
+<h4 class="text-white font-bold text-sm uppercase tracking-wider mb-1">Email</h4>
+<p class="text-slate-400 text-base">info@lsp-a3i.or.id</p>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-zinc-900 p-2 border border-white/5">
+<img alt="Map Location" class="w-full h-[350px] object-cover grayscale opacity-60" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwD_mDkRCSE8txyIalZbqAClYeBt2hxzmmcEdrgu4nMv050qexhitVxlzxQo-I8FeWSiFJrcOUE_ITf9QAesp4HoKRbbDCtjLSAmeQwW7T-1jX_Pe6kykSRRpKYF8RzoY4834qMD9VgdhIcC2ilzXBRaszZbXRbl797O9mXzv0nMpp-VV_m4Por6dhmzt2IF-gaE8_Zt3oFzY-1rofKtOLrT52jaiZposE4C-zV4V8NiMSycqvOscXkWVyqorzrf3hdOfZ2JxKkWwY"/>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-black py-20 border-t border-white/5">
+<div class="container">
+<div class="grid md:grid-cols-4 gap-12 mb-16">
+<div class="md:col-span-2">
+<div class="flex items-center gap-3 mb-6">
+<div class="w-8 h-8 bg-primary flex items-center justify-center rounded-sm">
+<span class="material-icons text-[#0a0a0a] text-lg font-bold">verified_user</span>
+</div>
+<span class="text-xl font-bold text-white tracking-tighter">LSP A3I</span>
+</div>
+<p class="text-slate-500 text-sm leading-relaxed max-w-sm mb-8">
+                    Lembaga Sertifikasi Profesi yang berlisensi BNSP, berkomitmen pada kualitas dan integritas sumber daya manusia Indonesia.
+                </p>
+<div class="flex gap-4">
+<a class="w-10 h-10 border border-white/10 flex items-center justify-center hover:border-primary text-slate-400 hover:text-primary transition-all" href="#">
+<span class="material-icons text-base">facebook</span>
+</a>
+<a class="w-10 h-10 border border-white/10 flex items-center justify-center hover:border-primary text-slate-400 hover:text-primary transition-all" href="#">
+<span class="material-icons text-base">alternate_email</span>
+</a>
+</div>
+</div>
+<div>
+<h4 class="text-white font-bold text-xs uppercase tracking-[0.2em] mb-6">Navigasi</h4>
+<ul class="space-y-4 text-sm text-slate-500">
+<li><a class="hover:text-primary transition-colors" href="#">Beranda</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Profil Lembaga</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Skema Sertifikasi</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Tempat Uji Kompetensi</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-bold text-xs uppercase tracking-[0.2em] mb-6">Legal</h4>
+<ul class="space-y-4 text-sm text-slate-500">
+<li><a class="hover:text-primary transition-colors" href="#">Kebijakan Privasi</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Syarat &amp; Ketentuan</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Lisensi BNSP</a></li>
+</ul>
+</div>
+</div>
+<div class="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
+<div class="text-slate-600 text-[11px] font-bold uppercase tracking-widest">
+                © 2024 LSP A3I. Lisensi No: LSP-1234-ID.
+            </div>
+<div class="text-slate-600 text-[11px] font-bold uppercase tracking-widest">
+                Developed for Certification Excellence
+            </div>
+</div>
+</div>
+</footer>
+<a class="fixed bottom-10 right-10 w-12 h-12 bg-primary flex items-center justify-center text-[#0a0a0a] hover:bg-white transition-all z-50 shadow-2xl" href="#">
+<span class="material-icons">arrow_upward</span>
+</a>
+
+</body></html>

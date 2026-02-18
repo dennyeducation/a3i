@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-[#0F0F0F] text-slate-100 font-display;
+  }
+}
+
+@layer components {
+  /* Beranda Utils */
+  .hero-gradient {
+    background: linear-gradient(rgba(15, 15, 15, 0.85), rgba(15, 15, 15, 0.95)),
+                url('https://images.unsplash.com/photo-1541625602330-2277a4c46182?q=80&w=2070&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+  }
+
+  .glass-nav {
+    @apply bg-[#0F0F0F]/90 backdrop-blur-md border-b border-[#f2b90d]/15;
+  }
+
+  /* Asesor Utils */
+  .gold-gradient-text {
+    background: linear-gradient(to bottom, #f2b90d 0%, #a88109 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: #111;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #f2b90d;
+    border-radius: 4px;
+  }
+
+  /* Documentation Utils */
+  .polaroid-frame {
+    @apply bg-white p-3 pb-10 border-[3px] border-primary shadow-2xl transition-transform duration-300;
+  }
+
+  .polaroid-frame:hover {
+    @apply -rotate-1 scale-[1.03];
+  }
+
+  .glass-panel {
+    @apply bg-neutral-muted/40 backdrop-blur-md border border-white/5;
+  }
+
+  /* Shared Utils */
+  .section-padding {
+    @apply py-24 md:py-32;
+  }
+
+  .container-standard {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-container {
+    @apply max-w-7xl mx-auto px-6 py-24;
+  }
+
+  .material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  }
+}

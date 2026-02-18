@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html class="dark" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f2b90d",
+                        "background-light": "#f8f8f5",
+                        "background-dark": "#0a0a0a",
+                        "neutral-dark": "#151515",
+                        "neutral-muted": "#1e1e1e",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        @layer components {
+            .polaroid-frame {
+                @apply bg-white p-3 pb-10 border-[3px] border-primary shadow-2xl transition-transform duration-300;
+            }
+            .polaroid-frame:hover {
+                @apply -rotate-1 scale-[1.03];
+            }
+            .glass-panel {
+                @apply bg-neutral-muted/40 backdrop-blur-md border border-white/5;
+            }
+            .section-container {
+                @apply max-w-7xl mx-auto px-6 py-24;
+            }
+            .material-symbols-outlined {
+                font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            }
+        }
+        body {
+            background-color: #000000;
+        }
+    </style>
+<title>LSP A3I - Dokumentasi &amp; Kontak</title>
+</head>
+<body class="font-display text-slate-100 min-h-screen selection:bg-primary selection:text-background-dark">
+<nav class="sticky top-0 z-50 bg-black/90 backdrop-blur-md border-b border-primary/20">
+<div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-primary rounded flex items-center justify-center">
+<span class="text-black font-bold text-xl">A3I</span>
+</div>
+<div class="flex flex-col">
+<span class="text-lg font-bold tracking-widest text-white leading-none uppercase">LSP A3I</span>
+<span class="text-[10px] text-primary/80 tracking-[0.2em] font-medium uppercase">Official Website</span>
+</div>
+</div>
+<div class="hidden md:flex items-center gap-10">
+<a class="text-sm font-semibold hover:text-primary transition-colors uppercase tracking-widest" href="#">Beranda</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors uppercase tracking-widest" href="#">Profil</a>
+<a class="text-sm font-semibold text-primary uppercase tracking-widest" href="#">Dokumentasi</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors uppercase tracking-widest" href="#">Sertifikasi</a>
+<a class="px-6 py-2.5 bg-primary text-black rounded font-bold text-sm hover:bg-white transition-all uppercase tracking-tighter" href="#">Hubungi Kami</a>
+</div>
+</div>
+</nav>
+<main>
+<header class="bg-neutral-dark border-b border-white/5 pt-20 pb-16">
+<div class="max-w-7xl mx-auto px-6">
+<div class="flex items-center gap-4 mb-4">
+<div class="h-px w-12 bg-primary"></div>
+<span class="text-primary font-bold tracking-[0.3em] uppercase text-xs">Arsip &amp; Komunikasi</span>
+</div>
+<h1 class="text-5xl md:text-6xl font-bold text-white mb-6 tracking-tight">Dokumentasi <span class="text-primary">&amp;</span> Kontak</h1>
+<p class="text-slate-400 max-w-2xl text-lg leading-relaxed">
+                    Jejak rekam kegiatan sertifikasi dan saluran komunikasi resmi LSP A3I untuk layanan profesional Anda.
+                </p>
+</div>
+</header>
+<section class="section-container">
+<div class="grid grid-cols-1 gap-24">
+<div>
+<div class="flex items-end justify-between mb-12 border-b border-white/10 pb-6">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary text-4xl">verified</span>
+<h2 class="text-3xl font-bold text-white">Uji Kompetensi</h2>
+</div>
+<span class="text-slate-500 text-sm hidden md:block">Album Sertifikasi Profesi</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+<div class="polaroid-frame group">
+<div class="overflow-hidden mb-4">
+<img class="w-full aspect-square object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-100 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDT3j9jCbdA7wmWiG1FfkLi8ho2Gjk007Pgsz-5vi3kiUoZ11lrdptCzX6m0k-3NQGJd3rtRwrJWoIXXMkco_CFEYCG0furY7CcwWLyACwXpnF6lI26ZgasfOTtXw3kVAqxaBO4mJM7h34SqAW0YMtbdjHCbEugLa9p8q5MWvr8hQ01mBbQtmvgr3KJztPYVp4cMPlfXms3Q_8ZTuHf-imQ-AirUSjYDFVAwFHNVipK7EmBKEIUpxtpiZMDkivXhHEx7sFQOE_DDJlY"/>
+</div>
+<p class="text-black font-bold text-[10px] text-center uppercase tracking-widest border-t border-black/5 pt-2">Sesi Teori - Bekasi 2023</p>
+</div>
+<div class="polaroid-frame group">
+<div class="overflow-hidden mb-4">
+<img class="w-full aspect-square object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-100 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_svh_JAwnf6K07dYp0woXGWIZ2ZcjksXSiQ-m-ZbqGlh7MNcPHC5gliBMa0xZ_WqvxV-CY-P8rXmHpL9A4p_Qznizph4EuRUvzHctFZwSai9MjcyoJWms8KVL06QEdMvJk0bUFqOfHkUcDTWcrrzwGmd0D1ksdZCVrzKEKAISpYTyvWu0Ecgi8DnwR_-Ydg1JxU-vc6i76WjXgNVCZA4tH2nP50bVsnNIEUvKn5stmfs2pchmHOvsJOTni1veWTZRNokqnd-mtG0d"/>
+</div>
+<p class="text-black font-bold text-[10px] text-center uppercase tracking-widest border-t border-black/5 pt-2">Evaluasi Kinerja Praktik</p>
+</div>
+<div class="polaroid-frame group">
+<div class="overflow-hidden mb-4">
+<img class="w-full aspect-square object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-100 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCskSi7xREx7e24b4NdEmHJNlMnXUoSbbmGDFKn4883uvlT6Wz6IenpzZelkZGJ-xltLsBNUe944Mnz6RqgKJEMJDQnoGA8D8nxhYJ6-mOba7wgsVzwXmqFhcDAA3LFrsRp9sJWwnqBQFVPt9DA5s6ucc00PRnmfdmTmcsQAeiX_5b5Md9liN1vRdDJLaZELJOIcDAc6kAlkGnVRh0Wm5rhmX2yqdBD2B8jV3fw3_dJeH31NyJpNrGv0QIjShJ58_uGTY4SSM0tU5qT"/>
+</div>
+<p class="text-black font-bold text-[10px] text-center uppercase tracking-widest border-t border-black/5 pt-2">Observasi Lapangan</p>
+</div>
+<div class="polaroid-frame group">
+<div class="overflow-hidden mb-4">
+<img class="w-full aspect-square object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-100 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwjECKLlXHQW19YWhDeX_8FtVvYRjGgpmHaTn_HHWZzutbN6ZJmcNEKzXUTVLyY8jnDf6_qGPhGvRSxCtkh0-rUVLgwNQITFOLlTJqf6hGjVluOC8IF7HFu8xIF6YkNLLhPYprFgidkNUGSHtJB2hgp1V066SVIDpHTClY0epypFV1iT9lMnPlUjQGRTadK-7Fq_rwKniq9ut1jLbHMSRKlpSK1aQTl_9t01RGDYizRkj4RZx7PvoJ9v8ucSIdwoXCsN_qKC9KN_rq"/>
+</div>
+<p class="text-black font-bold text-[10px] text-center uppercase tracking-widest border-t border-black/5 pt-2">Penutupan Sesi Ujian</p>
+</div>
+</div>
+</div>
+<div>
+<div class="flex items-end justify-between mb-12 border-b border-white/10 pb-6">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary text-4xl">security</span>
+<h2 class="text-3xl font-bold text-white">Surveilans BNSP</h2>
+</div>
+<span class="text-slate-500 text-sm hidden md:block">Audit Mutu &amp; Kepatuhan</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+<div class="polaroid-frame group">
+<div class="overflow-hidden mb-4">
+<img class="w-full aspect-square object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-100 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOfteReNYt4mdyQHx36gdAnj5YgUGzYfx4crqZE9DpGavwxVuEe_HMiWvatkX9AsQIz55sZ0OJkSOIH5q0JzSfqbdkaT5U2e4sYHGyYoVx3gKde4CoeUOn2keVzL-9DLbH016BgrLi15B1dgZAl-p_9_ZNkPxqepXkVX9tCROjq3fPOUQU21cAtFZsz-cWmn9l9oPZzahcEDdIkotTfRwddL1kB7m2APnbBV90veiy9vo1HvWane7EQIwEG1kSHHHeFJJ5ELPp3KwG"/>
+</div>
+<p class="text-black font-bold text-[10px] text-center uppercase tracking-widest border-t border-black/5 pt-2">Audit Dokumen Mutu</p>
+</div>
+<div class="polaroid-frame group">
+<div class="overflow-hidden mb-4">
+<img class="w-full aspect-square object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-100 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCEake3ceLBGL4c0oTssImOg_4fGgC4a7ZWXWScOXFTcV3ZW-TTe68LYL0E6oERgNWzxAHavViuoJh5m7RAAA6UacI2jMApxF3KcQ5TTAYF8L82B6JVztgHkUP_Z5e3mMduCToRyzOHoxXsh-nzPwp3PeGTINSGfoKy-csUKmGHsS4r7WqwivTe9qRv4c3EqMd79FwNwXnBtnaBuxw98Bh34xu2KLKnTax3UmFh0vgHdq4EqaMIc3znxzygg6xYgVvVSmuh5SD6aRvo"/>
+</div>
+<p class="text-black font-bold text-[10px] text-center uppercase tracking-widest border-t border-black/5 pt-2">Sistem Manajemen</p>
+</div>
+<div class="polaroid-frame group">
+<div class="overflow-hidden mb-4">
+<img class="w-full aspect-square object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-100 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoejoRTcdcKNAdSV1GirDl26RhDsRvnPyqYHDleLR2HLg4kFOq1buE_ADRrzjQXGPlbkT8unDwDmJ7z6K52679Ox1IGAE4OWpDlCWD2Mt8zsSDc7grMEvZhB-4fnjZnbyBOEj0fzgkFXPTynXfZWmoDZHsa49PHSfVgiOXNlN-Owh3lrDYdJaqXpY_9w9cOvQsOddpcN7sroP_m-pjDlb6_SaQv-c7YFYed55l7QlufnDXZeKJS81ziP6m1bNLOUmC86aMNc27DmbV"/>
+</div>
+<p class="text-black font-bold text-[10px] text-center uppercase tracking-widest border-t border-black/5 pt-2">Verifikasi TUK</p>
+</div>
+<div class="polaroid-frame group">
+<div class="overflow-hidden mb-4">
+<img class="w-full aspect-square object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-100 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNOzL_Px1u3YmHFBz4A1UDYw5NMKyJJW7yX_gs3pg1RHXlPTjNg-Spy5oEOeYbRlCcqF9WPv_S0ENoUy_0HzD58DcmcpYqx3EemH2TtC60_KTmcbz-Q8xWbOIjgoBClhBliY56mKKrOveMGw9QwXKfjhEJfG1CZUq-bHMmtXr-5Zu8tlLnP9_zYfhv3m0BoNaCL3Eq1xYC3t_l4hAJIBNd4OdcbyY0zLVB2bv8Qhm5HfnA6rv1FlSScpdR92mDOikfiS2-AhRdcLhP"/>
+</div>
+<p class="text-black font-bold text-[10px] text-center uppercase tracking-widest border-t border-black/5 pt-2">Dokumentasi Akhir Audit</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="bg-neutral-dark/50 border-y border-white/5">
+<div class="section-container">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+<div class="lg:col-span-5 space-y-12">
+<div>
+<div class="flex items-center gap-3 mb-4">
+<span class="w-8 h-px bg-primary"></span>
+<span class="text-primary text-xs font-bold uppercase tracking-[0.2em]">Saluran Komunikasi</span>
+</div>
+<h2 class="text-4xl font-bold text-white mb-6">Hubungi Kantor Pusat Kami</h2>
+<p class="text-slate-400 leading-relaxed">
+                                Silakan hubungi tim kami untuk konsultasi sertifikasi, pendaftaran uji kompetensi, atau pertanyaan terkait LSP A3I.
+                            </p>
+</div>
+<div class="space-y-6">
+<div class="flex gap-6 p-6 rounded-lg bg-neutral-muted/30 border border-white/5 group hover:border-primary/30 transition-all">
+<div class="w-14 h-14 rounded bg-primary/10 flex items-center justify-center flex-shrink-0 group-hover:bg-primary group-hover:text-black transition-colors duration-500">
+<span class="material-symbols-outlined text-primary group-hover:text-black">location_on</span>
+</div>
+<div>
+<h4 class="text-white font-bold mb-2 uppercase tracking-wide">Lokasi Kantor</h4>
+<p class="text-slate-400 text-sm leading-relaxed">
+                                        Sun City Square Blok A-32, Jl. Hasibuan No.1, Bekasi Selatan, Bekasi, Jawa Barat 17141
+                                    </p>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="flex items-center gap-4 p-5 rounded-lg bg-neutral-muted/30 border border-white/5">
+<span class="material-symbols-outlined text-primary">call</span>
+<div>
+<p class="text-[10px] text-slate-500 uppercase font-bold tracking-widest">Telepon</p>
+<p class="text-white text-sm font-medium">(021) 8896 1234</p>
+</div>
+</div>
+<div class="flex items-center gap-4 p-5 rounded-lg bg-neutral-muted/30 border border-white/5">
+<span class="material-symbols-outlined text-primary">mail</span>
+<div>
+<p class="text-[10px] text-slate-500 uppercase font-bold tracking-widest">Email</p>
+<p class="text-white text-sm font-medium">info@lspa3i.or.id</p>
+</div>
+</div>
+</div>
+</div>
+<div class="rounded-xl overflow-hidden border border-white/10 h-40">
+<img class="w-full h-full object-cover opacity-50 grayscale hover:grayscale-0 transition-all duration-1000" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRu8Zey9660m4uQj8c1_u4F404TSP7-tc9z9Xzpk2yQwfXjgjO5EveJLV6rQ5CNhkVcLGN6UwAfT_3uTOJiDYe8m1thN6I_tn0HMETWm8d41b9CSPgaXgb94zMptNtWrIRQ7JNllrceDD3BVOfWKFGyVcQPe7ybJGO47GN9mhu5EUZHn1k9JgPyZaDJqQ3GKH4NvEzC1nFZUTD0Kb_MD_4ifzZV2c09evkFvvZxJ3y5Rqly1TRdXFOwLe0gDdHNkuSwREq3dQsrRgV"/>
+</div>
+</div>
+<div class="lg:col-span-7 glass-panel p-10 md:p-14 rounded shadow-2xl relative">
+<form action="#" class="space-y-8">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="space-y-3">
+<label class="text-[10px] font-bold text-primary uppercase tracking-[0.2em]">Nama Lengkap</label>
+<input class="w-full bg-black/50 border-white/10 rounded py-4 px-6 text-white focus:border-primary focus:ring-0 transition-all placeholder:text-slate-700" placeholder="Contoh: Budi Santoso" type="text"/>
+</div>
+<div class="space-y-3">
+<label class="text-[10px] font-bold text-primary uppercase tracking-[0.2em]">Alamat Email</label>
+<input class="w-full bg-black/50 border-white/10 rounded py-4 px-6 text-white focus:border-primary focus:ring-0 transition-all placeholder:text-slate-700" placeholder="budi@email.com" type="email"/>
+</div>
+</div>
+<div class="space-y-3">
+<label class="text-[10px] font-bold text-primary uppercase tracking-[0.2em]">Subjek Kepentingan</label>
+<input class="w-full bg-black/50 border-white/10 rounded py-4 px-6 text-white focus:border-primary focus:ring-0 transition-all placeholder:text-slate-700" placeholder="Contoh: Permohonan Sertifikasi" type="text"/>
+</div>
+<div class="space-y-3">
+<label class="text-[10px] font-bold text-primary uppercase tracking-[0.2em]">Pesan Detail</label>
+<textarea class="w-full bg-black/50 border-white/10 rounded py-4 px-6 text-white focus:border-primary focus:ring-0 transition-all placeholder:text-slate-700 resize-none" placeholder="Tuliskan pertanyaan atau kebutuhan Anda secara detail..." rows="5"></textarea>
+</div>
+<button class="w-full py-5 bg-primary hover:bg-white text-black font-bold rounded transition-all duration-300 shadow-lg uppercase tracking-widest text-sm" type="submit">
+                                Kirim Pesan Sekarang
+                            </button>
+</form>
+</div>
+</div>
+</div>
+</section>
+<section class="py-32 text-center bg-black">
+<div class="max-w-3xl mx-auto px-6">
+<h3 class="text-4xl md:text-6xl font-display italic text-primary/70 mb-10 leading-tight">Sekian &amp; Terimakasih</h3>
+<div class="w-16 h-1 bg-primary/30 mx-auto mb-10 rounded-full"></div>
+<p class="text-slate-500 text-sm leading-relaxed mb-12 max-w-lg mx-auto">
+                    Lembaga Sertifikasi Profesi A3I berkomitmen penuh untuk menjaga standar kompetensi profesional akuntansi di Indonesia.
+                </p>
+<div class="flex justify-center gap-8">
+<a class="w-12 h-12 border border-white/10 rounded flex items-center justify-center text-slate-400 hover:text-primary hover:border-primary transition-all" href="#">
+<svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path></svg>
+</a>
+<a class="w-12 h-12 border border-white/10 rounded flex items-center justify-center text-slate-400 hover:text-primary hover:border-primary transition-all" href="#">
+<svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg>
+</a>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-neutral-dark py-12 border-t border-white/5">
+<div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center text-[10px] text-slate-500 gap-8">
+<div class="flex flex-col md:flex-row items-center gap-4">
+<div class="w-8 h-8 bg-primary/20 rounded flex items-center justify-center">
+<span class="text-primary font-bold text-xs">A3I</span>
+</div>
+<p class="uppercase tracking-widest">© 2024 LSP A3I (Asosiasi Ahli Akuntansi Indonesia). Seluruh Hak Cipta Dilindungi.</p>
+</div>
+<div class="flex gap-8 uppercase tracking-widest font-bold">
+<a class="hover:text-primary transition-colors" href="#">Kebijakan Privasi</a>
+<a class="hover:text-primary transition-colors" href="#">Syarat &amp; Ketentuan</a>
+<a class="hover:text-primary transition-colors" href="#">Peta Situs</a>
+</div>
+</div>
+</footer>
+
+</body></html>

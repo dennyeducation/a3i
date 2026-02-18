@@ -1,0 +1,8 @@
+{
+  "/asesor/page": "app/asesor/page.js",
+  "/kebijakan/page": "app/kebijakan/page.js",
+  "/kontak/page": "app/kontak/page.js",
+  "/page": "app/page.js",
+  "/profil/page": "app/profil/page.js",
+  "/sertifikasi/page": "app/sertifikasi/page.js"
+}
