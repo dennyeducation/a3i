@@ -12,7 +12,7 @@ const Beranda = () => {
                             <span className="text-[11px] font-extrabold uppercase tracking-[0.2em] text-primary">BNSP Terakreditasi</span>
                         </div>
                         <h1 className="text-4xl md:text-5xl lg:text-7xl font-extrabold text-white leading-tight mb-8">
-                            Lembaga Sertifikasi Profesi <span className="text-primary italic">Alat Angkat dan Angkut</span> Indonesia
+                            Lembaga Sertifikasi Profesi <span className="text-primary italic">Alat Angkat dan Angkut</span> <span className="text-red-600">Indonesia</span>
                         </h1>
                         <p className="text-lg md:text-xl text-slate-300 mb-12 leading-relaxed border-l-4 border-primary pl-8">
                             Meningkatkan standar keselamatan industri Indonesia melalui sertifikasi kompetensi tenaga kerja yang terpercaya dan diakui secara nasional.
