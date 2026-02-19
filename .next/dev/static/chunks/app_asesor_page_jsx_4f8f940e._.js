@@ -8,78 +8,231 @@ __turbopack_context__.s([
 ]);
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/.pnpm/next@16.1.6_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/.pnpm/next@16.1.6_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/.pnpm/next@16.1.6_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/client/app-dir/link.js [app-client] (ecmascript)");
 ;
 var _s = __turbopack_context__.k.signature();
 'use client';
 ;
+;
+const ITEMS_PER_PAGE = 10;
 const AsesorTuk = ()=>{
     _s();
     const [searchTerm, setSearchTerm] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])('');
     const [filterBidang, setFilterBidang] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])('Semua Bidang');
+    const [currentPage, setCurrentPage] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(1);
     const assessors = [
         {
             no: '01',
-            name: 'Bambang Wijaya, S.T., M.T.',
-            reg: 'MET.000.001234 2023',
-            field: 'Teknik Alat Berat & Manufaktur',
+            name: 'Kusnanto',
+            reg: 'MET.000.000008 2006',
+            field: 'Alat Angkat dan Angkut',
             status: 'Aktif'
         },
         {
             no: '02',
-            name: 'Ir. H. Sudirman Putra',
-            reg: 'MET.000.005678 2022',
-            field: 'Manajemen Produksi Industri',
+            name: 'Ahmat Asrul Darus',
+            reg: 'MET.000.002091 2017',
+            field: 'Alat Angkat dan Angkut',
             status: 'Aktif'
         },
         {
             no: '03',
-            name: 'Diana Lestari, M.Eng',
-            reg: 'MET.000.009101 2023',
-            field: 'Instrumen dan Kontrol Otomasi',
+            name: 'Junaidi',
+            reg: 'MET.000.003026 2021',
+            field: 'Alat Angkat dan Angkut',
             status: 'Aktif'
         },
         {
             no: '04',
-            name: 'Ahmad Faisal Rahman',
-            reg: 'MET.000.003456 2021',
-            field: 'Sistem Hidrolik & Pneumatik',
+            name: 'Maryanto',
+            reg: 'MET.000.004764 2017',
+            field: 'Alat Angkat dan Angkut',
             status: 'Aktif'
         },
         {
             no: '05',
-            name: 'Siti Aminah Zahra',
-            reg: 'MET.000.007890 2024',
-            field: 'Kesehatan & Keselamatan Kerja (K3)',
+            name: 'Adhy Kusumo Prabowo',
+            reg: 'MET.000.000086 2021',
+            field: 'Alat Angkat dan Angkut',
+            status: 'Aktif'
+        },
+        {
+            no: '06',
+            name: 'Afrida Fadillah Junaedi',
+            reg: 'MET.000.003007 2024',
+            field: 'Alat Angkat dan Angkut',
+            status: 'Aktif'
+        },
+        {
+            no: '07',
+            name: 'Akmal Ahmad',
+            reg: 'MET.000.003016 2024',
+            field: 'Alat Angkat dan Angkut',
+            status: 'Aktif'
+        },
+        {
+            no: '08',
+            name: 'Aziz Asmauna',
+            reg: 'MET.000.003004 2024',
+            field: 'Alat Angkat dan Angkut',
+            status: 'Aktif'
+        },
+        {
+            no: '09',
+            name: 'Bayu Baroto Yuwono',
+            reg: 'MET.000.003012 2024',
+            field: 'Alat Angkat dan Angkut',
+            status: 'Aktif'
+        },
+        {
+            no: '10',
+            name: 'Boy Putra Anggara Prasetyo',
+            reg: 'MET.000.003009 2024',
+            field: 'Alat Angkat dan Angkut',
+            status: 'Aktif'
+        },
+        {
+            no: '11',
+            name: 'Budiarto',
+            reg: 'MET.000.000968 2021',
+            field: 'Alat Angkat dan Angkut',
+            status: 'Aktif'
+        },
+        {
+            no: '12',
+            name: 'Chandra Yuliadi Hatmoko',
+            reg: 'MET.000.003003 2024',
+            field: 'Alat Angkat dan Angkut',
+            status: 'Aktif'
+        },
+        {
+            no: '13',
+            name: 'Djoko Laras',
+            reg: 'MET.000.003020 2024',
+            field: 'Alat Angkat dan Angkut',
+            status: 'Aktif'
+        },
+        {
+            no: '14',
+            name: 'Haris Wafi Auzan',
+            reg: 'MET.000.003006 2024',
+            field: 'Alat Angkat dan Angkut',
+            status: 'Aktif'
+        },
+        {
+            no: '15',
+            name: 'Ia Kurniawan',
+            reg: 'MET.000.003014 2024',
+            field: 'Alat Angkat dan Angkut',
+            status: 'Aktif'
+        },
+        {
+            no: '16',
+            name: 'Irsad',
+            reg: 'MET.000.003005 2024',
+            field: 'Alat Angkat dan Angkut',
+            status: 'Aktif'
+        },
+        {
+            no: '17',
+            name: 'Lukman Hakim',
+            reg: 'MET.000.003015 2024',
+            field: 'Alat Angkat dan Angkut',
+            status: 'Aktif'
+        },
+        {
+            no: '18',
+            name: 'Muhammad Ichsan',
+            reg: 'MET.000.003011 2024',
+            field: 'Alat Angkat dan Angkut',
+            status: 'Aktif'
+        },
+        {
+            no: '19',
+            name: 'Muhammad Kasiyyanto Assahid',
+            reg: 'MET.000.003013 2024',
+            field: 'Alat Angkat dan Angkut',
+            status: 'Aktif'
+        },
+        {
+            no: '20',
+            name: 'Musryanto',
+            reg: 'MET.000.003018 2024',
+            field: 'Alat Angkat dan Angkut',
+            status: 'Aktif'
+        },
+        {
+            no: '21',
+            name: 'Nasaruddin',
+            reg: 'MET.000.003017 2024',
+            field: 'Alat Angkat dan Angkut',
+            status: 'Aktif'
+        },
+        {
+            no: '22',
+            name: 'Nindya Bayu Narotama',
+            reg: 'MET.000.003008 2024',
+            field: 'Alat Angkat dan Angkut',
+            status: 'Aktif'
+        },
+        {
+            no: '23',
+            name: 'Salamuddin',
+            reg: 'MET.000.003010 2024',
+            field: 'Alat Angkat dan Angkut',
+            status: 'Aktif'
+        },
+        {
+            no: '24',
+            name: 'Solikin',
+            reg: 'MET.000.000802 2009',
+            field: 'Alat Angkat dan Angkut',
+            status: 'Aktif'
+        },
+        {
+            no: '25',
+            name: 'Supahing',
+            reg: 'MET.000.003021 2024',
+            field: 'Alat Angkat dan Angkut',
+            status: 'Aktif'
+        },
+        {
+            no: '26',
+            name: 'Wiji Lestari',
+            reg: 'MET.000.003019 2024',
+            field: 'Alat Angkat dan Angkut',
             status: 'Aktif'
         }
     ];
-    const tuks = [
-        {
-            code: 'DELTA',
-            name: 'PT. Delta Global Industri',
-            type: 'Industrial Solutions',
-            loc: 'Jakarta Utara'
-        },
-        {
-            code: 'PROSYD',
-            name: 'PT. Prosyd Synergy Pratama',
-            type: 'Engineering & Training',
-            loc: 'Bekasi, Jawa Barat',
-            italic: true
-        },
-        {
-            code: 'AMTA',
-            name: 'Akademi Manufaktur Indonesia',
-            type: 'Technical Academy',
-            loc: 'Tangerang'
-        },
-        {
-            code: 'KAI',
-            name: 'PT. Karya Abadi Indonesia',
-            type: 'Construction & Energy',
-            loc: 'Surabaya'
-        }
+    const bidangOptions = [
+        'Semua Bidang',
+        ...Array.from(new Set(assessors.map((a)=>a.field)))
     ];
+    const filteredAssessors = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useMemo"])({
+        "AsesorTuk.useMemo[filteredAssessors]": ()=>{
+            const term = searchTerm.toLowerCase();
+            return assessors.filter({
+                "AsesorTuk.useMemo[filteredAssessors]": (a)=>{
+                    const matchesSearch = !term || a.name.toLowerCase().includes(term) || a.reg.toLowerCase().includes(term);
+                    const matchesBidang = filterBidang === 'Semua Bidang' || a.field === filterBidang;
+                    return matchesSearch && matchesBidang;
+                }
+            }["AsesorTuk.useMemo[filteredAssessors]"]);
+        }
+    }["AsesorTuk.useMemo[filteredAssessors]"], [
+        searchTerm,
+        filterBidang
+    ]);
+    const totalPages = Math.ceil(filteredAssessors.length / ITEMS_PER_PAGE);
+    const paginatedAssessors = filteredAssessors.slice((currentPage - 1) * ITEMS_PER_PAGE, currentPage * ITEMS_PER_PAGE);
+    const handleSearch = (e)=>{
+        setSearchTerm(e.target.value);
+        setCurrentPage(1);
+    };
+    const handleFilterBidang = (e)=>{
+        setFilterBidang(e.target.value);
+        setCurrentPage(1);
+    };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -89,25 +242,25 @@ const AsesorTuk = ()=>{
                         className: "absolute inset-0 z-0",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
-                                alt: "Industrial Engineering Team",
+                                alt: "Tim Asesor LSP A3I",
                                 className: "w-full h-full object-cover opacity-20 grayscale",
-                                src: "https://lh3.googleusercontent.com/aida-public/AB6AXuBV3lOXK7dFJxlhyhyFyGjBZcMTwyPJ1tpq1QBfWgCsCEiDNdGmNDHZ0OO8LFs7g7QlvgcTy7zrFV03NEm7gMcge0Hh_KvKhvQQ0vBOBzyXvPF9_qgvRCjNCWz8pVsISnhQwajTmtLa3DYLLGul6vY1nIvdfnXWRrSdBlEjjuRKJZZ9O-FZdKBgO7Lhw015MemvqvZZsuJLKwcVMhrJ9BZ0gu0Utt-6HsJ4tnbmsjKnNwEbR1mjiltKY71jtGaAeRoarBLOhFGbxUjj"
+                                src: "/assets/asesora3i.jpg"
                             }, void 0, false, {
                                 fileName: "[project]/app/asesor/page.jsx",
-                                lineNumber: 28,
+                                lineNumber: 73,
                                 columnNumber: 21
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: "absolute inset-0 bg-gradient-to-t from-deep-black via-deep-black/80 to-transparent"
                             }, void 0, false, {
                                 fileName: "[project]/app/asesor/page.jsx",
-                                lineNumber: 33,
+                                lineNumber: 78,
                                 columnNumber: 21
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/asesor/page.jsx",
-                        lineNumber: 27,
+                        lineNumber: 72,
                         columnNumber: 17
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -118,7 +271,7 @@ const AsesorTuk = ()=>{
                                 children: "Direktori Kompetensi"
                             }, void 0, false, {
                                 fileName: "[project]/app/asesor/page.jsx",
-                                lineNumber: 36,
+                                lineNumber: 81,
                                 columnNumber: 21
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
@@ -130,14 +283,14 @@ const AsesorTuk = ()=>{
                                         children: "Asesor"
                                     }, void 0, false, {
                                         fileName: "[project]/app/asesor/page.jsx",
-                                        lineNumber: 38,
+                                        lineNumber: 83,
                                         columnNumber: 28
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     " Kompetensi"
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/asesor/page.jsx",
-                                lineNumber: 37,
+                                lineNumber: 82,
                                 columnNumber: 21
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -145,19 +298,159 @@ const AsesorTuk = ()=>{
                                 children: "Tenaga ahli profesional yang tersertifikasi oleh BNSP untuk menjamin standar kualitas kompetensi industri Alat-Alat Industri Indonesia secara profesional dan objektif."
                             }, void 0, false, {
                                 fileName: "[project]/app/asesor/page.jsx",
-                                lineNumber: 40,
+                                lineNumber: 85,
                                 columnNumber: 21
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/asesor/page.jsx",
-                        lineNumber: 35,
+                        lineNumber: 80,
                         columnNumber: 17
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/asesor/page.jsx",
-                lineNumber: 26,
+                lineNumber: 71,
+                columnNumber: 13
+            }, ("TURBOPACK compile-time value", void 0)),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
+                className: "max-w-7xl mx-auto px-6 pt-16 pb-4",
+                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    className: "rounded-2xl overflow-hidden border border-primary/20 shadow-2xl",
+                    children: [
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            className: "bg-[#111] px-8 py-5 flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-primary/20",
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    children: [
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                            className: "text-primary text-[10px] font-bold uppercase tracking-[0.3em] mb-1",
+                                            children: "Foto Bersama"
+                                        }, void 0, false, {
+                                            fileName: "[project]/app/asesor/page.jsx",
+                                            lineNumber: 97,
+                                            columnNumber: 29
+                                        }, ("TURBOPACK compile-time value", void 0)),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
+                                            className: "text-white text-xl md:text-2xl font-extrabold leading-tight",
+                                            children: [
+                                                "Tim Asesor ",
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                    className: "text-primary",
+                                                    children: "LSP A3I"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/app/asesor/page.jsx",
+                                                    lineNumber: 98,
+                                                    columnNumber: 116
+                                                }, ("TURBOPACK compile-time value", void 0))
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "[project]/app/asesor/page.jsx",
+                                            lineNumber: 98,
+                                            columnNumber: 29
+                                        }, ("TURBOPACK compile-time value", void 0)),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                            className: "text-zinc-500 text-xs mt-1",
+                                            children: "Tenaga penguji kompeten bersertifikat BNSP yang berdedikasi tinggi."
+                                        }, void 0, false, {
+                                            fileName: "[project]/app/asesor/page.jsx",
+                                            lineNumber: 99,
+                                            columnNumber: 29
+                                        }, ("TURBOPACK compile-time value", void 0))
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "[project]/app/asesor/page.jsx",
+                                    lineNumber: 96,
+                                    columnNumber: 25
+                                }, ("TURBOPACK compile-time value", void 0)),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: "flex gap-8 text-center flex-shrink-0",
+                                    children: [
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            children: [
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                    className: "text-primary text-3xl font-black block",
+                                                    children: "26"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/app/asesor/page.jsx",
+                                                    lineNumber: 103,
+                                                    columnNumber: 33
+                                                }, ("TURBOPACK compile-time value", void 0)),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                    className: "text-zinc-400 text-xs uppercase tracking-widest",
+                                                    children: "Asesor Aktif"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/app/asesor/page.jsx",
+                                                    lineNumber: 104,
+                                                    columnNumber: 33
+                                                }, ("TURBOPACK compile-time value", void 0))
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "[project]/app/asesor/page.jsx",
+                                            lineNumber: 102,
+                                            columnNumber: 29
+                                        }, ("TURBOPACK compile-time value", void 0)),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            className: "w-px bg-primary/20"
+                                        }, void 0, false, {
+                                            fileName: "[project]/app/asesor/page.jsx",
+                                            lineNumber: 106,
+                                            columnNumber: 29
+                                        }, ("TURBOPACK compile-time value", void 0)),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            children: [
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                    className: "text-primary text-3xl font-black block",
+                                                    children: "BNSP"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/app/asesor/page.jsx",
+                                                    lineNumber: 108,
+                                                    columnNumber: 33
+                                                }, ("TURBOPACK compile-time value", void 0)),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                    className: "text-zinc-400 text-xs uppercase tracking-widest",
+                                                    children: "Tersertifikasi"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/app/asesor/page.jsx",
+                                                    lineNumber: 109,
+                                                    columnNumber: 33
+                                                }, ("TURBOPACK compile-time value", void 0))
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "[project]/app/asesor/page.jsx",
+                                            lineNumber: 107,
+                                            columnNumber: 29
+                                        }, ("TURBOPACK compile-time value", void 0))
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "[project]/app/asesor/page.jsx",
+                                    lineNumber: 101,
+                                    columnNumber: 25
+                                }, ("TURBOPACK compile-time value", void 0))
+                            ]
+                        }, void 0, true, {
+                            fileName: "[project]/app/asesor/page.jsx",
+                            lineNumber: 95,
+                            columnNumber: 21
+                        }, ("TURBOPACK compile-time value", void 0)),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
+                            alt: "Tim Asesor LSP A3I",
+                            className: "w-full max-h-[520px] object-cover object-center",
+                            src: "/assets/asesora3i.jpg"
+                        }, void 0, false, {
+                            fileName: "[project]/app/asesor/page.jsx",
+                            lineNumber: 114,
+                            columnNumber: 21
+                        }, ("TURBOPACK compile-time value", void 0))
+                    ]
+                }, void 0, true, {
+                    fileName: "[project]/app/asesor/page.jsx",
+                    lineNumber: 93,
+                    columnNumber: 17
+                }, ("TURBOPACK compile-time value", void 0))
+            }, void 0, false, {
+                fileName: "[project]/app/asesor/page.jsx",
+                lineNumber: 92,
                 columnNumber: 13
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("main", {
@@ -177,7 +470,7 @@ const AsesorTuk = ()=>{
                                                 children: "search"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/asesor/page.jsx",
-                                                lineNumber: 50,
+                                                lineNumber: 126,
                                                 columnNumber: 29
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -185,16 +478,16 @@ const AsesorTuk = ()=>{
                                                 placeholder: "Cari nama asesor atau nomor registrasi...",
                                                 className: "w-full bg-deep-black border border-neutral-gold/50 text-white pl-12 pr-4 py-3.5 rounded-lg focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary placeholder:text-zinc-600 text-sm",
                                                 value: searchTerm,
-                                                onChange: (e)=>setSearchTerm(e.target.value)
+                                                onChange: handleSearch
                                             }, void 0, false, {
                                                 fileName: "[project]/app/asesor/page.jsx",
-                                                lineNumber: 51,
+                                                lineNumber: 127,
                                                 columnNumber: 29
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/asesor/page.jsx",
-                                        lineNumber: 49,
+                                        lineNumber: 125,
                                         columnNumber: 25
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -203,40 +496,17 @@ const AsesorTuk = ()=>{
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("select", {
                                                 className: "bg-deep-black border border-neutral-gold/50 text-white px-4 py-3.5 rounded-lg focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary min-w-[180px] text-sm appearance-none cursor-pointer",
                                                 value: filterBidang,
-                                                onChange: (e)=>setFilterBidang(e.target.value),
-                                                children: [
-                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
-                                                        children: "Semua Bidang"
-                                                    }, void 0, false, {
+                                                onChange: handleFilterBidang,
+                                                children: bidangOptions.map((opt)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
+                                                        children: opt
+                                                    }, opt, false, {
                                                         fileName: "[project]/app/asesor/page.jsx",
-                                                        lineNumber: 65,
-                                                        columnNumber: 33
-                                                    }, ("TURBOPACK compile-time value", void 0)),
-                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
-                                                        children: "Teknik Mesin"
-                                                    }, void 0, false, {
-                                                        fileName: "[project]/app/asesor/page.jsx",
-                                                        lineNumber: 66,
-                                                        columnNumber: 33
-                                                    }, ("TURBOPACK compile-time value", void 0)),
-                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
-                                                        children: "Kelistrikan"
-                                                    }, void 0, false, {
-                                                        fileName: "[project]/app/asesor/page.jsx",
-                                                        lineNumber: 67,
-                                                        columnNumber: 33
-                                                    }, ("TURBOPACK compile-time value", void 0)),
-                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
-                                                        children: "Manajemen"
-                                                    }, void 0, false, {
-                                                        fileName: "[project]/app/asesor/page.jsx",
-                                                        lineNumber: 68,
-                                                        columnNumber: 33
-                                                    }, ("TURBOPACK compile-time value", void 0))
-                                                ]
-                                            }, void 0, true, {
+                                                        lineNumber: 142,
+                                                        columnNumber: 37
+                                                    }, ("TURBOPACK compile-time value", void 0)))
+                                            }, void 0, false, {
                                                 fileName: "[project]/app/asesor/page.jsx",
-                                                lineNumber: 60,
+                                                lineNumber: 136,
                                                 columnNumber: 29
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -246,24 +516,24 @@ const AsesorTuk = ()=>{
                                                     children: "filter_list"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/asesor/page.jsx",
-                                                    lineNumber: 71,
+                                                    lineNumber: 146,
                                                     columnNumber: 33
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             }, void 0, false, {
                                                 fileName: "[project]/app/asesor/page.jsx",
-                                                lineNumber: 70,
+                                                lineNumber: 145,
                                                 columnNumber: 29
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/asesor/page.jsx",
-                                        lineNumber: 59,
+                                        lineNumber: 135,
                                         columnNumber: 25
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/asesor/page.jsx",
-                                lineNumber: 48,
+                                lineNumber: 124,
                                 columnNumber: 21
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -282,7 +552,7 @@ const AsesorTuk = ()=>{
                                                             children: "No"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/asesor/page.jsx",
-                                                            lineNumber: 81,
+                                                            lineNumber: 156,
                                                             columnNumber: 41
                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -290,7 +560,7 @@ const AsesorTuk = ()=>{
                                                             children: "Nama Asesor"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/asesor/page.jsx",
-                                                            lineNumber: 82,
+                                                            lineNumber: 157,
                                                             columnNumber: 41
                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -298,7 +568,7 @@ const AsesorTuk = ()=>{
                                                             children: "No. Registrasi (MET)"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/asesor/page.jsx",
-                                                            lineNumber: 83,
+                                                            lineNumber: 158,
                                                             columnNumber: 41
                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -306,7 +576,7 @@ const AsesorTuk = ()=>{
                                                             children: "Sektor / Bidang"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/asesor/page.jsx",
-                                                            lineNumber: 84,
+                                                            lineNumber: 159,
                                                             columnNumber: 41
                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -314,23 +584,23 @@ const AsesorTuk = ()=>{
                                                             children: "Status"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/asesor/page.jsx",
-                                                            lineNumber: 85,
+                                                            lineNumber: 160,
                                                             columnNumber: 41
                                                         }, ("TURBOPACK compile-time value", void 0))
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/asesor/page.jsx",
-                                                    lineNumber: 80,
+                                                    lineNumber: 155,
                                                     columnNumber: 37
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             }, void 0, false, {
                                                 fileName: "[project]/app/asesor/page.jsx",
-                                                lineNumber: 79,
+                                                lineNumber: 154,
                                                 columnNumber: 33
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("tbody", {
                                                 className: "divide-y divide-primary/10",
-                                                children: assessors.map((asesor)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("tr", {
+                                                children: paginatedAssessors.length > 0 ? paginatedAssessors.map((asesor)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("tr", {
                                                         className: "hover:bg-primary/5 transition-colors group",
                                                         children: [
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -338,7 +608,7 @@ const AsesorTuk = ()=>{
                                                                 children: asesor.no
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/asesor/page.jsx",
-                                                                lineNumber: 91,
+                                                                lineNumber: 166,
                                                                 columnNumber: 45
                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -346,7 +616,7 @@ const AsesorTuk = ()=>{
                                                                 children: asesor.name
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/asesor/page.jsx",
-                                                                lineNumber: 92,
+                                                                lineNumber: 167,
                                                                 columnNumber: 45
                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -354,7 +624,7 @@ const AsesorTuk = ()=>{
                                                                 children: asesor.reg
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/asesor/page.jsx",
-                                                                lineNumber: 93,
+                                                                lineNumber: 168,
                                                                 columnNumber: 45
                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -362,7 +632,7 @@ const AsesorTuk = ()=>{
                                                                 children: asesor.field
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/asesor/page.jsx",
-                                                                lineNumber: 94,
+                                                                lineNumber: 169,
                                                                 columnNumber: 45
                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -372,39 +642,53 @@ const AsesorTuk = ()=>{
                                                                     children: asesor.status
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/asesor/page.jsx",
-                                                                    lineNumber: 96,
+                                                                    lineNumber: 171,
                                                                     columnNumber: 49
                                                                 }, ("TURBOPACK compile-time value", void 0))
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/asesor/page.jsx",
-                                                                lineNumber: 95,
+                                                                lineNumber: 170,
                                                                 columnNumber: 45
                                                             }, ("TURBOPACK compile-time value", void 0))
                                                         ]
                                                     }, asesor.no, true, {
                                                         fileName: "[project]/app/asesor/page.jsx",
-                                                        lineNumber: 90,
+                                                        lineNumber: 165,
                                                         columnNumber: 41
-                                                    }, ("TURBOPACK compile-time value", void 0)))
+                                                    }, ("TURBOPACK compile-time value", void 0))) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("tr", {
+                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
+                                                        colSpan: 5,
+                                                        className: "px-8 py-12 text-center text-zinc-500 text-sm",
+                                                        children: "Tidak ada asesor yang sesuai dengan pencarian."
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/app/asesor/page.jsx",
+                                                        lineNumber: 178,
+                                                        columnNumber: 45
+                                                    }, ("TURBOPACK compile-time value", void 0))
+                                                }, void 0, false, {
+                                                    fileName: "[project]/app/asesor/page.jsx",
+                                                    lineNumber: 177,
+                                                    columnNumber: 41
+                                                }, ("TURBOPACK compile-time value", void 0))
                                             }, void 0, false, {
                                                 fileName: "[project]/app/asesor/page.jsx",
-                                                lineNumber: 88,
+                                                lineNumber: 163,
                                                 columnNumber: 33
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/asesor/page.jsx",
-                                        lineNumber: 78,
+                                        lineNumber: 153,
                                         columnNumber: 29
                                     }, ("TURBOPACK compile-time value", void 0))
                                 }, void 0, false, {
                                     fileName: "[project]/app/asesor/page.jsx",
-                                    lineNumber: 77,
+                                    lineNumber: 152,
                                     columnNumber: 25
                                 }, ("TURBOPACK compile-time value", void 0))
                             }, void 0, false, {
                                 fileName: "[project]/app/asesor/page.jsx",
-                                lineNumber: 76,
+                                lineNumber: 151,
                                 columnNumber: 21
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -416,308 +700,159 @@ const AsesorTuk = ()=>{
                                             "Menampilkan ",
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                 className: "text-white font-medium",
-                                                children: "5"
+                                                children: paginatedAssessors.length
                                             }, void 0, false, {
                                                 fileName: "[project]/app/asesor/page.jsx",
-                                                lineNumber: 108,
-                                                columnNumber: 74
+                                                lineNumber: 190,
+                                                columnNumber: 41
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             " dari ",
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                 className: "text-white font-medium",
-                                                children: "26"
+                                                children: filteredAssessors.length
                                             }, void 0, false, {
                                                 fileName: "[project]/app/asesor/page.jsx",
-                                                lineNumber: 108,
-                                                columnNumber: 129
+                                                lineNumber: 190,
+                                                columnNumber: 122
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             " Asesor"
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/asesor/page.jsx",
-                                        lineNumber: 108,
+                                        lineNumber: 189,
                                         columnNumber: 25
                                     }, ("TURBOPACK compile-time value", void 0)),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    totalPages > 1 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                         className: "flex gap-2",
                                         children: [
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                                className: "px-4 py-2 text-sm border border-primary/20 rounded-lg hover:bg-primary/10 transition-colors text-zinc-400",
+                                                className: "px-4 py-2 text-sm border border-primary/20 rounded-lg hover:bg-primary/10 transition-colors text-zinc-400 disabled:opacity-40 disabled:cursor-not-allowed",
+                                                onClick: ()=>setCurrentPage((p)=>Math.max(1, p - 1)),
+                                                disabled: currentPage === 1,
                                                 children: "Sebelumnya"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/asesor/page.jsx",
-                                                lineNumber: 110,
-                                                columnNumber: 29
+                                                lineNumber: 194,
+                                                columnNumber: 33
                                             }, ("TURBOPACK compile-time value", void 0)),
+                                            Array.from({
+                                                length: totalPages
+                                            }, (_, i)=>i + 1).map((page)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                                    className: `px-4 py-2 text-sm rounded-lg font-bold transition-colors ${currentPage === page ? 'bg-primary border border-primary text-deep-black' : 'border border-primary/20 hover:bg-primary/10 text-zinc-400'}`,
+                                                    onClick: ()=>setCurrentPage(page),
+                                                    children: page
+                                                }, page, false, {
+                                                    fileName: "[project]/app/asesor/page.jsx",
+                                                    lineNumber: 200,
+                                                    columnNumber: 37
+                                                }, ("TURBOPACK compile-time value", void 0))),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                                className: "px-4 py-2 text-sm bg-primary border border-primary text-deep-black font-bold rounded-lg",
-                                                children: "1"
-                                            }, void 0, false, {
-                                                fileName: "[project]/app/asesor/page.jsx",
-                                                lineNumber: 111,
-                                                columnNumber: 29
-                                            }, ("TURBOPACK compile-time value", void 0)),
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                                className: "px-4 py-2 text-sm border border-primary/20 rounded-lg hover:bg-primary/10 transition-colors text-zinc-400",
-                                                children: "2"
-                                            }, void 0, false, {
-                                                fileName: "[project]/app/asesor/page.jsx",
-                                                lineNumber: 112,
-                                                columnNumber: 29
-                                            }, ("TURBOPACK compile-time value", void 0)),
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                                className: "px-4 py-2 text-sm border border-primary/20 rounded-lg hover:bg-primary/10 transition-colors text-zinc-400",
-                                                children: "3"
-                                            }, void 0, false, {
-                                                fileName: "[project]/app/asesor/page.jsx",
-                                                lineNumber: 113,
-                                                columnNumber: 29
-                                            }, ("TURBOPACK compile-time value", void 0)),
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                                className: "px-4 py-2 text-sm border border-primary/20 rounded-lg hover:bg-primary/10 transition-colors text-zinc-400",
+                                                className: "px-4 py-2 text-sm border border-primary/20 rounded-lg hover:bg-primary/10 transition-colors text-zinc-400 disabled:opacity-40 disabled:cursor-not-allowed",
+                                                onClick: ()=>setCurrentPage((p)=>Math.min(totalPages, p + 1)),
+                                                disabled: currentPage === totalPages,
                                                 children: "Berikutnya"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/asesor/page.jsx",
-                                                lineNumber: 114,
-                                                columnNumber: 29
+                                                lineNumber: 206,
+                                                columnNumber: 33
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/asesor/page.jsx",
-                                        lineNumber: 109,
-                                        columnNumber: 25
-                                    }, ("TURBOPACK compile-time value", void 0))
-                                ]
-                            }, void 0, true, {
-                                fileName: "[project]/app/asesor/page.jsx",
-                                lineNumber: 107,
-                                columnNumber: 21
-                            }, ("TURBOPACK compile-time value", void 0))
-                        ]
-                    }, void 0, true, {
-                        fileName: "[project]/app/asesor/page.jsx",
-                        lineNumber: 47,
-                        columnNumber: 17
-                    }, ("TURBOPACK compile-time value", void 0)),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
-                        className: "mt-32 pt-24 border-t border-primary/10",
-                        children: [
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "max-w-7xl mx-auto px-6 text-center mb-16",
-                                children: [
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                                        className: "text-3xl md:text-4xl font-bold mb-6",
-                                        children: [
-                                            "Tempat Uji ",
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                className: "text-primary",
-                                                children: "Kompetensi (TUK)"
-                                            }, void 0, false, {
-                                                fileName: "[project]/app/asesor/page.jsx",
-                                                lineNumber: 121,
-                                                columnNumber: 88
-                                            }, ("TURBOPACK compile-time value", void 0)),
-                                            " Sewaktu"
-                                        ]
-                                    }, void 0, true, {
-                                        fileName: "[project]/app/asesor/page.jsx",
-                                        lineNumber: 121,
-                                        columnNumber: 25
-                                    }, ("TURBOPACK compile-time value", void 0)),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "w-20 h-1 bg-primary mx-auto mb-8"
-                                    }, void 0, false, {
-                                        fileName: "[project]/app/asesor/page.jsx",
-                                        lineNumber: 122,
-                                        columnNumber: 25
-                                    }, ("TURBOPACK compile-time value", void 0)),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                        className: "text-zinc-400 max-w-3xl mx-auto text-base leading-relaxed",
-                                        children: "LSP A3I menjalin kemitraan strategis dengan fasilitas industri terkemuka untuk menyelenggarakan sertifikasi di lokasi yang memenuhi standar teknis nasional."
-                                    }, void 0, false, {
-                                        fileName: "[project]/app/asesor/page.jsx",
-                                        lineNumber: 123,
-                                        columnNumber: 25
-                                    }, ("TURBOPACK compile-time value", void 0))
-                                ]
-                            }, void 0, true, {
-                                fileName: "[project]/app/asesor/page.jsx",
-                                lineNumber: 120,
-                                columnNumber: 21
-                            }, ("TURBOPACK compile-time value", void 0)),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6",
-                                children: tuks.map((tuk)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "group bg-deep-black border border-primary/20 p-8 rounded-xl hover:border-primary/60 transition-all duration-500 flex flex-col items-center text-center shadow-lg hover:-translate-y-1",
-                                        children: [
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                className: "w-full aspect-video mb-8 relative flex items-center justify-center bg-[#111] rounded-lg border border-primary/5 group-hover:border-primary/20 transition-all",
-                                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                    className: `text-primary font-black text-3xl tracking-tighter ${tuk.italic ? 'italic' : ''}`,
-                                                    children: tuk.code
-                                                }, void 0, false, {
-                                                    fileName: "[project]/app/asesor/page.jsx",
-                                                    lineNumber: 132,
-                                                    columnNumber: 37
-                                                }, ("TURBOPACK compile-time value", void 0))
-                                            }, void 0, false, {
-                                                fileName: "[project]/app/asesor/page.jsx",
-                                                lineNumber: 131,
-                                                columnNumber: 33
-                                            }, ("TURBOPACK compile-time value", void 0)),
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                                className: "text-lg font-bold mb-2 group-hover:text-primary transition-colors",
-                                                children: tuk.name
-                                            }, void 0, false, {
-                                                fileName: "[project]/app/asesor/page.jsx",
-                                                lineNumber: 134,
-                                                columnNumber: 33
-                                            }, ("TURBOPACK compile-time value", void 0)),
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                className: "text-[10px] text-zinc-500 uppercase tracking-[0.2em] mb-6",
-                                                children: tuk.type
-                                            }, void 0, false, {
-                                                fileName: "[project]/app/asesor/page.jsx",
-                                                lineNumber: 135,
-                                                columnNumber: 33
-                                            }, ("TURBOPACK compile-time value", void 0)),
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                className: "mt-auto pt-6 border-t border-primary/10 w-full flex items-center justify-center gap-2 text-zinc-400 text-xs",
-                                                children: [
-                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                        className: "material-symbols-outlined text-sm",
-                                                        children: "location_on"
-                                                    }, void 0, false, {
-                                                        fileName: "[project]/app/asesor/page.jsx",
-                                                        lineNumber: 137,
-                                                        columnNumber: 37
-                                                    }, ("TURBOPACK compile-time value", void 0)),
-                                                    tuk.loc
-                                                ]
-                                            }, void 0, true, {
-                                                fileName: "[project]/app/asesor/page.jsx",
-                                                lineNumber: 136,
-                                                columnNumber: 33
-                                            }, ("TURBOPACK compile-time value", void 0))
-                                        ]
-                                    }, tuk.code, true, {
-                                        fileName: "[project]/app/asesor/page.jsx",
-                                        lineNumber: 130,
+                                        lineNumber: 193,
                                         columnNumber: 29
-                                    }, ("TURBOPACK compile-time value", void 0)))
-                            }, void 0, false, {
+                                    }, ("TURBOPACK compile-time value", void 0))
+                                ]
+                            }, void 0, true, {
                                 fileName: "[project]/app/asesor/page.jsx",
-                                lineNumber: 128,
+                                lineNumber: 188,
                                 columnNumber: 21
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/asesor/page.jsx",
-                        lineNumber: 119,
+                        lineNumber: 123,
                         columnNumber: 17
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
-                        className: "max-w-7xl mx-auto px-6 mt-32",
+                        className: "mt-20 pt-12 border-t border-primary/10",
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "h-[450px] rounded-2xl overflow-hidden border border-primary/20 relative group shadow-2xl",
+                            className: "max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6 bg-[#111] border border-primary/15 p-8 rounded-xl",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "absolute inset-0 bg-deep-black/40 group-hover:bg-deep-black/20 transition-all z-10"
-                                }, void 0, false, {
-                                    fileName: "[project]/app/asesor/page.jsx",
-                                    lineNumber: 147,
-                                    columnNumber: 25
-                                }, ("TURBOPACK compile-time value", void 0)),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
-                                    alt: "Map of Indonesia",
-                                    className: "w-full h-full object-cover grayscale brightness-[0.3]",
-                                    src: "https://lh3.googleusercontent.com/aida-public/AB6AXuAyzaMtdlpUnQO3gjOUpQ-7IRjL2e7bTnToLRlSQGOmxqVNjuzfDkT-emryctKQRz0cE0hu-sreJzkO49Ej0DCxkq3WeMH4uyFHle9frBYBXjSu6ubD7AEnYgoJv9xeMBV5iHFStuE4g1iwptn2_V4Yl5BRFP6betH5tPyE16FQ9WgvdIk4nCHXzlYA2XHoI0RgG_OChsgO4FAnRsf001zO12XF40RPLjlDqOPuM1Zm5lCz1J_vi6V0yTWTzim_1MkN8h9jTLsEcUJc"
-                                }, void 0, false, {
-                                    fileName: "[project]/app/asesor/page.jsx",
-                                    lineNumber: 148,
-                                    columnNumber: 25
-                                }, ("TURBOPACK compile-time value", void 0)),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "absolute bottom-8 left-8 right-8 md:right-auto z-20 bg-deep-black/90 p-8 rounded-xl border border-primary/20 backdrop-blur-md max-w-lg",
                                     children: [
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "flex items-center gap-3 mb-4",
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
+                                            className: "text-xl font-bold mb-2",
                                             children: [
+                                                "Tempat Uji ",
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                    className: "material-symbols-outlined text-primary",
-                                                    children: "distance"
+                                                    className: "text-primary",
+                                                    children: "Kompetensi (TUK)"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/asesor/page.jsx",
-                                                    lineNumber: 155,
-                                                    columnNumber: 33
-                                                }, ("TURBOPACK compile-time value", void 0)),
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
-                                                    className: "text-xl font-bold",
-                                                    children: "Jangkauan Nasional"
-                                                }, void 0, false, {
-                                                    fileName: "[project]/app/asesor/page.jsx",
-                                                    lineNumber: 156,
-                                                    columnNumber: 33
+                                                    lineNumber: 219,
+                                                    columnNumber: 79
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/asesor/page.jsx",
-                                            lineNumber: 154,
+                                            lineNumber: 219,
                                             columnNumber: 29
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                            className: "text-zinc-400 text-sm mb-8 leading-relaxed",
-                                            children: "Kami hadir di lebih dari 12 kota besar di seluruh wilayah Indonesia untuk mempermudah akses sertifikasi bagi tenaga kerja industri nasional."
+                                            className: "text-zinc-400 text-sm",
+                                            children: "Lihat daftar mitra TUK resmi dan sebaran lokasi uji kompetensi LSP A3I."
                                         }, void 0, false, {
                                             fileName: "[project]/app/asesor/page.jsx",
-                                            lineNumber: 158,
-                                            columnNumber: 29
-                                        }, ("TURBOPACK compile-time value", void 0)),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                            className: "w-full md:w-auto px-6 py-3 bg-primary/10 border border-primary/30 text-primary font-bold text-xs tracking-widest flex items-center justify-center gap-3 hover:bg-primary hover:text-deep-black transition-all",
-                                            children: [
-                                                "LIHAT PETA SEBARAN ",
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                    className: "material-symbols-outlined text-base",
-                                                    children: "arrow_forward"
-                                                }, void 0, false, {
-                                                    fileName: "[project]/app/asesor/page.jsx",
-                                                    lineNumber: 162,
-                                                    columnNumber: 52
-                                                }, ("TURBOPACK compile-time value", void 0))
-                                            ]
-                                        }, void 0, true, {
-                                            fileName: "[project]/app/asesor/page.jsx",
-                                            lineNumber: 161,
+                                            lineNumber: 220,
                                             columnNumber: 29
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/asesor/page.jsx",
-                                    lineNumber: 153,
+                                    lineNumber: 218,
+                                    columnNumber: 25
+                                }, ("TURBOPACK compile-time value", void 0)),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                                    href: "/tuk",
+                                    className: "flex-shrink-0 px-6 py-3 bg-primary/10 border border-primary/30 text-primary font-bold text-xs tracking-widest flex items-center gap-3 hover:bg-primary hover:text-deep-black transition-all rounded-lg",
+                                    children: [
+                                        "LIHAT HALAMAN TUK ",
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                            className: "material-symbols-outlined text-base",
+                                            children: "arrow_forward"
+                                        }, void 0, false, {
+                                            fileName: "[project]/app/asesor/page.jsx",
+                                            lineNumber: 223,
+                                            columnNumber: 47
+                                        }, ("TURBOPACK compile-time value", void 0))
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "[project]/app/asesor/page.jsx",
+                                    lineNumber: 222,
                                     columnNumber: 25
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/asesor/page.jsx",
-                            lineNumber: 146,
+                            lineNumber: 217,
                             columnNumber: 21
                         }, ("TURBOPACK compile-time value", void 0))
                     }, void 0, false, {
                         fileName: "[project]/app/asesor/page.jsx",
-                        lineNumber: 145,
+                        lineNumber: 216,
                         columnNumber: 17
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/asesor/page.jsx",
-                lineNumber: 46,
+                lineNumber: 122,
                 columnNumber: 13
             }, ("TURBOPACK compile-time value", void 0))
         ]
     }, void 0, true);
 };
-_s(AsesorTuk, "ETVrAFwIflajZNmxCrPP1G0dy7Q=");
+_s(AsesorTuk, "6Uq5BUVKt2Uyn7Yro9fguSclFLk=");
 _c = AsesorTuk;
 const __TURBOPACK__default__export__ = AsesorTuk;
 var _c;

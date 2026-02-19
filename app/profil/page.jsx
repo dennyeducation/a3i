@@ -48,8 +48,8 @@ const ProfilLembaga = () => {
                             <div className="bg-zinc-900 overflow-hidden">
                                 <img
                                     alt="LSP A3I Office"
-                                    className="w-full aspect-[4/3] object-cover opacity-80"
-                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSK7hNNEKXbxnl_OVbvAnObfJdXOIPkS0RrQ8t5Nt0cVjCNPeqoZ0XTyAptQcAMZkqkNjwdKdKIQ4qe-cqtBFvUXE_KxzkC954HtjC0Nc5r5M09-7-tUG-h4FmV53ReOEWwl19g3GKIU5zyH_vCujQ-ikcfHeBW6yvUTUFPjLxZihKhv6i1JNkNNfHedBB84g7-iBCUy6uo_ScpbkEGS6vEjhvOKmjK6muVp-E8eBGlgJoQWQj6XhgllQgQALx0IkkQV_Llh71dfMw"
+                                    className="w-full aspect-[4/3] object-cover"
+                                    src="/assets/profila3i.jpg"
                                 />
                             </div>
                         </div>

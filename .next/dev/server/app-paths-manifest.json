@@ -4,5 +4,6 @@
   "/kontak/page": "app/kontak/page.js",
   "/page": "app/page.js",
   "/profil/page": "app/profil/page.js",
-  "/sertifikasi/page": "app/sertifikasi/page.js"
+  "/sertifikasi/page": "app/sertifikasi/page.js",
+  "/tuk/page": "app/tuk/page.js"
 }

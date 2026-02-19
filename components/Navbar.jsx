@@ -18,6 +18,7 @@ const Navbar = () => {
         { name: 'Kebijakan', path: '/kebijakan' },
         { name: 'Sertifikasi', path: '/sertifikasi' },
         { name: 'Asesor', path: '/asesor' },
+        { name: 'TUK', path: '/tuk' },
         { name: 'Kontak', path: '/kontak' },
     ];
 

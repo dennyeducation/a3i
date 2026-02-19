@@ -38,6 +38,7 @@ const Footer = () => {
                                 { name: 'Profil Lembaga', path: '/profil' },
                                 { name: 'Skema Sertifikasi', path: '/sertifikasi' },
                                 { name: 'Daftar Asesor', path: '/asesor' },
+                                { name: 'Tempat Uji Kompetensi', path: '/tuk' },
                                 { name: 'Pusat Bantuan', path: '/kontak' },
                             ].map((link) => (
                                 <li key={link.name}>

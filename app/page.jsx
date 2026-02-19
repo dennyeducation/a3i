@@ -66,7 +66,7 @@ const Beranda = () => {
                                 <img
                                     alt="Tentang LSP A3I"
                                     className="relative z-10 rounded shadow-2xl border border-white/10 object-cover h-[550px] w-full"
-                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvY3I8rfAxzh82Zaxw8_ySRgOO-qKxupUifCG63ajCtCyFMQscdS-dHesUF8cm1YnW962nXivh-ID1Ax3cn2Y-pImXYc4v5KL52ocIjIsygo2U4Xe6nHNn0_yn1Epdrg1OEKjm2X4OVQzZysUzi7T6Tw82D-3cQiSfzSbOls80m_WW4VeQoM0haHTh_JK0S-OLSDxyXo0UxcN-MTKO6AZ05kGw_tXqU1pAKfFruEerfKTdIu73OUYyH4YU-GDh7hF4cOlyrfA_fN6O"
+                                    src="/assets/asesor.jpg"
                                 />
 
                                 <div className="absolute -bottom-8 -right-8 bg-primary p-8 rounded shadow-2xl z-20 hidden md:block group-hover:-translate-y-2 transition-transform duration-300">

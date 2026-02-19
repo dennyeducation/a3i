@@ -12,7 +12,7 @@
   /* Beranda Utils */
   .hero-gradient {
     background: linear-gradient(rgba(15, 15, 15, 0.85), rgba(15, 15, 15, 0.95)),
-                url('https://images.unsplash.com/photo-1541625602330-2277a4c46182?q=80&w=2070&auto=format&fit=crop');
+                url('/excavator.png');
     background-size: cover;
     background-position: center;
   }
