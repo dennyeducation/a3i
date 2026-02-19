@@ -23,6 +23,8 @@ const Navbar = () => {
         { name: 'Kontak', path: '/kontak' },
     ];
 
+    const isCekSertifikat = pathname === '/cek-sertifikat';
+
     return (
         <header className="fixed top-0 w-full z-50 glass-nav h-20 transition-all duration-300">
             <div className="container-standard h-full">
@@ -49,7 +51,19 @@ const Navbar = () => {
                                 {link.name}
                             </Link>
                         ))}
-                        <div className="pl-4">
+                        {/* Cek Sertifikat CTA + Login */}
+                        <div className="pl-2 flex items-center gap-3">
+                            <Link
+                                href="/cek-sertifikat"
+                                className={`flex items-center gap-1.5 px-4 py-1.5 border rounded text-sm font-bold transition-all ${
+                                    isCekSertifikat
+                                        ? 'border-primary bg-primary/10 text-primary'
+                                        : 'border-primary/40 text-primary hover:bg-primary/10 hover:border-primary'
+                                }`}
+                            >
+                                <span className="material-icons-outlined text-[16px]">verified_user</span>
+                                Cek Sertifikat
+                            </Link>
                             <button className="bg-primary text-background-dark px-6 py-2 rounded font-bold hover:bg-white transition-all transform hover:-translate-y-0.5 shadow-lg shadow-primary/10">
                                 Login
                             </button>
@@ -82,6 +96,14 @@ const Navbar = () => {
                                 {link.name}
                             </Link>
                         ))}
+                        <Link
+                            href="/cek-sertifikat"
+                            onClick={() => setIsMenuOpen(false)}
+                            className="flex items-center gap-2 text-primary py-2 border-b border-white/5 font-bold transition-colors"
+                        >
+                            <span className="material-icons-outlined text-[18px]">verified_user</span>
+                            Cek Sertifikat
+                        </Link>
                         <button className="bg-primary text-background-dark px-6 py-3 rounded font-bold w-full uppercase tracking-widest text-sm mt-4 hover:bg-white transition-colors">
                             Login Area
                         </button>
