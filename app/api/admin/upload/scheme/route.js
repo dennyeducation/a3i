@@ -4,8 +4,6 @@ import { writeFile, mkdir } from 'fs/promises';
 import path from 'path';
 import { randomUUID } from 'crypto';
 
-export const config = { api: { bodyParser: false } };
-
 // POST /api/admin/upload/scheme — upload gambar skema sertifikasi
 export async function POST(request) {
     const auth = await requireAdmin(request);
@@ -27,19 +25,28 @@ export async function POST(request) {
         if (file.size > maxSize)
             return NextResponse.json({ error: 'Ukuran file maksimal 2MB' }, { status: 400 });
 
-        const ext       = file.name.split('.').pop().toLowerCase();
-        const filename  = `${randomUUID()}.${ext}`;
-        const uploadDir = path.join(process.cwd(), 'public', 'uploads', 'schemes');
+        const ext      = file.name.split('.').pop().toLowerCase();
+        const filename = `${randomUUID()}.${ext}`;
+        const bytes    = await file.arrayBuffer();
+        const buffer   = Buffer.from(bytes);
 
-        await mkdir(uploadDir, { recursive: true });
+        // Coba simpan ke public/uploads/schemes (lokal/dev)
+        // Pada Vercel filesystem read-only — tulis ke /tmp sebagai fallback
+        let url;
+        try {
+            const uploadDir = path.join(process.cwd(), 'public', 'uploads', 'schemes');
+            await mkdir(uploadDir, { recursive: true });
+            await writeFile(path.join(uploadDir, filename), buffer);
+            url = `/uploads/schemes/${filename}`;
+        } catch {
+            const tmpPath = path.join('/tmp', filename);
+            await writeFile(tmpPath, buffer);
+            url = `/tmp/${filename}`;
+        }
 
-        const bytes  = await file.arrayBuffer();
-        const buffer = Buffer.from(bytes);
-        await writeFile(path.join(uploadDir, filename), buffer);
-
-        return NextResponse.json({ success: true, url: `/uploads/schemes/${filename}` });
+        return NextResponse.json({ success: true, url });
     } catch (e) {
-        console.error(e);
-        return NextResponse.json({ error: 'Gagal mengupload file' }, { status: 500 });
+        console.error('Upload scheme error:', e);
+        return NextResponse.json({ error: `Gagal mengupload file: ${e.message}` }, { status: 500 });
     }
 }

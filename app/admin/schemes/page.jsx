@@ -519,7 +519,7 @@ export default function AdminSchemesPage() {
                             {/* Gambar Skema */}
                             <div>
                                 <label className="block text-slate-400 text-sm mb-1.5">Gambar Skema</label>
-                                <div className="flex items-center gap-4">
+                                <div className="flex items-start gap-4">
                                     {form.image ? (
                                         <div className="relative shrink-0">
                                             <img src={form.image} alt="Preview" className="w-20 h-20 rounded-lg object-cover border border-white/20" />
@@ -533,16 +533,24 @@ export default function AdminSchemesPage() {
                                             <span className="material-icons-outlined text-slate-600 text-2xl">image</span>
                                         </div>
                                     )}
-                                    <label className={`flex-1 flex items-center gap-2 px-4 py-2.5 border border-white/10 rounded-lg cursor-pointer transition-all text-sm font-medium ${uploading ? 'opacity-50 cursor-not-allowed' : 'hover:border-primary/50 hover:bg-primary/5 text-slate-300'}`}>
-                                        {uploading
-                                            ? <><span className="material-icons-outlined text-base animate-spin text-primary">refresh</span> Mengupload...</>
-                                            : <><span className="material-icons-outlined text-base">upload</span> {form.image ? 'Ganti Gambar' : 'Upload Gambar'}</>
-                                        }
-                                        <input type="file" accept="image/*" className="hidden" disabled={uploading}
-                                            onChange={e => e.target.files?.[0] && handleImageUpload(e.target.files[0])} />
-                                    </label>
+                                    <div className="flex-1 space-y-2">
+                                        <label className={`flex items-center gap-2 px-4 py-2.5 border border-white/10 rounded-lg cursor-pointer transition-all text-sm font-medium ${uploading ? 'opacity-50 cursor-not-allowed' : 'hover:border-primary/50 hover:bg-primary/5 text-slate-300'}`}>
+                                            {uploading
+                                                ? <><span className="material-icons-outlined text-base animate-spin text-primary">refresh</span> Mengupload...</>
+                                                : <><span className="material-icons-outlined text-base">upload</span> {form.image ? 'Ganti Gambar' : 'Upload Gambar'}</>
+                                            }
+                                            <input type="file" accept="image/*" className="hidden" disabled={uploading}
+                                                onChange={e => e.target.files?.[0] && handleImageUpload(e.target.files[0])} />
+                                        </label>
+                                        <div className="flex items-center gap-2">
+                                            <span className="text-slate-600 text-xs">atau ketik path:</span>
+                                        </div>
+                                        <input type="text" value={form.image} placeholder="cth. /assets/rigger.jpg"
+                                            onChange={e => setForm(f => ({ ...f, image: e.target.value }))}
+                                            className="w-full bg-background-dark border border-white/10 rounded-lg px-3 py-2 text-white placeholder-slate-600 focus:outline-none focus:border-primary/50 transition-colors text-sm font-mono" />
+                                    </div>
                                 </div>
-                                <p className="text-slate-600 text-xs mt-1.5">Format JPG, PNG, WEBP. Maks 2MB.</p>
+                                <p className="text-slate-600 text-xs mt-1.5">Upload file (JPG/PNG/WEBP, maks 2MB) atau ketik path gambar yang sudah ada di folder <span className="font-mono">/public/</span></p>
                             </div>
 
                             {/* Unit Kompetensi */}
