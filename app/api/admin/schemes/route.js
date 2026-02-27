@@ -70,7 +70,7 @@ export async function POST(request) {
 
     try {
         const body = await request.json();
-        const { code, name, description, category, level, duration_months, requirements, competency_units, status } = body;
+        const { code, name, description, category, level, duration_months, requirements, competency_units, status, image } = body;
 
         if (!code || !name) {
             return NextResponse.json({ error: 'Kode dan nama skema wajib diisi' }, { status: 400 });
@@ -84,8 +84,8 @@ export async function POST(request) {
 
         const result = await query(
             `INSERT INTO certification_schemes
-                (code, name, description, category, level, duration_months, requirements, competency_units, status, created_by)
-             VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10)
+                (code, name, description, category, level, duration_months, requirements, competency_units, status, image, created_by)
+             VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
              RETURNING *`,
             [
                 code.trim().toUpperCase(),
@@ -97,6 +97,7 @@ export async function POST(request) {
                 requirements || null,
                 JSON.stringify(competency_units || []),
                 status || 'draft',
+                image || null,
                 auth.user.id,
             ]
         );

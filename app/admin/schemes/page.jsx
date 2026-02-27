@@ -15,7 +15,7 @@ const STATUS_STYLE = {
 const emptyForm = {
     code: '', name: '', description: '', category: '', level: '',
     duration_months: 36, requirements: '', status: 'draft',
-    competency_units: [],
+    competency_units: [], image: '',
 };
 
 const emptyUnit = { code: '', name: '', standard: 'SKKNI' };
@@ -36,6 +36,7 @@ export default function AdminSchemesPage() {
     const [form, setForm]             = useState(emptyForm);
     const [formError, setFormError]   = useState('');
     const [formLoading, setFormLoading] = useState(false);
+    const [uploading, setUploading]   = useState(false);
 
     // Auth guard
     useEffect(() => {
@@ -78,6 +79,7 @@ export default function AdminSchemesPage() {
             requirements: s.requirements || '',
             status: s.status,
             competency_units: Array.isArray(s.competency_units) ? s.competency_units : [],
+            image: s.image || '',
         });
         setFormError('');
         setModal('edit');
@@ -99,6 +101,23 @@ export default function AdminSchemesPage() {
         ...f,
         competency_units: f.competency_units.map((u, idx) => idx === i ? { ...u, [field]: val } : u),
     }));
+
+    const handleImageUpload = async (file) => {
+        setUploading(true);
+        try {
+            const fd = new FormData();
+            fd.append('file', file);
+            const res  = await fetch('/api/admin/upload/scheme', {
+                method: 'POST',
+                headers: { Authorization: `Bearer ${tok()}` },
+                body: fd,
+            });
+            const data = await res.json();
+            if (data.success) setForm(f => ({ ...f, image: data.url }));
+            else setFormError(data.error || 'Gagal upload gambar');
+        } catch { setFormError('Terjadi kesalahan saat upload'); }
+        finally { setUploading(false); }
+    };
 
     const handleCreate = async (e) => {
         e.preventDefault();
@@ -495,6 +514,35 @@ export default function AdminSchemesPage() {
                                 <textarea name="requirements" value={form.requirements} onChange={handleChange}
                                     placeholder="1. Persyaratan pertama&#10;2. Persyaratan kedua" rows={3}
                                     className="w-full bg-background-dark border border-white/10 rounded-lg px-4 py-2.5 text-white placeholder-slate-600 focus:outline-none focus:border-primary/50 transition-colors resize-none" />
+                            </div>
+
+                            {/* Gambar Skema */}
+                            <div>
+                                <label className="block text-slate-400 text-sm mb-1.5">Gambar Skema</label>
+                                <div className="flex items-center gap-4">
+                                    {form.image ? (
+                                        <div className="relative shrink-0">
+                                            <img src={form.image} alt="Preview" className="w-20 h-20 rounded-lg object-cover border border-white/20" />
+                                            <button type="button" onClick={() => setForm(f => ({ ...f, image: '' }))}
+                                                className="absolute -top-1.5 -right-1.5 w-5 h-5 bg-red-500 rounded-full flex items-center justify-center">
+                                                <span className="material-icons-outlined text-white text-xs">close</span>
+                                            </button>
+                                        </div>
+                                    ) : (
+                                        <div className="w-20 h-20 rounded-lg border border-dashed border-white/20 flex items-center justify-center shrink-0 bg-white/5">
+                                            <span className="material-icons-outlined text-slate-600 text-2xl">image</span>
+                                        </div>
+                                    )}
+                                    <label className={`flex-1 flex items-center gap-2 px-4 py-2.5 border border-white/10 rounded-lg cursor-pointer transition-all text-sm font-medium ${uploading ? 'opacity-50 cursor-not-allowed' : 'hover:border-primary/50 hover:bg-primary/5 text-slate-300'}`}>
+                                        {uploading
+                                            ? <><span className="material-icons-outlined text-base animate-spin text-primary">refresh</span> Mengupload...</>
+                                            : <><span className="material-icons-outlined text-base">upload</span> {form.image ? 'Ganti Gambar' : 'Upload Gambar'}</>
+                                        }
+                                        <input type="file" accept="image/*" className="hidden" disabled={uploading}
+                                            onChange={e => e.target.files?.[0] && handleImageUpload(e.target.files[0])} />
+                                    </label>
+                                </div>
+                                <p className="text-slate-600 text-xs mt-1.5">Format JPG, PNG, WEBP. Maks 2MB.</p>
                             </div>
 
                             {/* Unit Kompetensi */}
