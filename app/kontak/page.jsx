@@ -61,7 +61,7 @@ const KontakPage = () => {
                                     <div>
                                         <h4 className="text-white font-bold mb-2 uppercase tracking-wide">Lokasi Kantor</h4>
                                         <p className="text-slate-400 text-sm leading-relaxed">
-                                            Sun City Square Blok A-32, Jl. Hasibuan No.1, Bekasi Selatan, Bekasi, Jawa Barat 17141
+                                            Suncity Square, Ruko, Jl. Mayor Madmuin Hasibuan No.45 Blok A, Bekasi Selatan, Bekasi
                                         </p>
                                     </div>
                                 </div>
@@ -70,14 +70,14 @@ const KontakPage = () => {
                                         <span className="material-symbols-outlined text-primary">call</span>
                                         <div>
                                             <p className="text-[10px] text-slate-500 uppercase font-bold tracking-widest">Telepon</p>
-                                            <p className="text-white text-sm font-medium">(021) 8896 1234</p>
+                                            <p className="text-white text-sm font-medium">(021) 88869010, 88869021</p>
                                         </div>
                                     </div>
-                                    <div className="flex items-center gap-4 p-5 rounded-lg bg-neutral-muted/30 border border-white/5">
-                                        <span className="material-symbols-outlined text-primary">mail</span>
-                                        <div>
+                                    <div className="flex items-start gap-4 p-5 rounded-lg bg-neutral-muted/30 border border-white/5">
+                                        <span className="material-symbols-outlined text-primary flex-shrink-0 mt-0.5">mail</span>
+                                        <div className="min-w-0">
                                             <p className="text-[10px] text-slate-500 uppercase font-bold tracking-widest">Email</p>
-                                            <p className="text-white text-sm font-medium">info@lspa3i.or.id</p>
+                                            <p className="text-white text-sm font-medium break-all">alatangkatangkutindonesia@gmail.com</p>
                                         </div>
                                     </div>
                                 </div>

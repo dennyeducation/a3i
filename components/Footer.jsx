@@ -2,8 +2,10 @@
 
 import React from 'react';
 import Link from 'next/link';
+import { useAuth } from '@/contexts/AuthContext';
 
 const Footer = () => {
+    const { user, isAdmin } = useAuth();
     return (
         <footer className="bg-[#080808] border-t border-primary/20 pt-24 pb-12">
             <div className="container-standard">
@@ -58,16 +60,16 @@ const Footer = () => {
                             <div className="flex items-start">
                                 <span className="material-icons-outlined text-primary mr-4 text-xl mt-0.5">location_on</span>
                                 <p className="text-slate-500 text-sm leading-relaxed">
-                                    Jl. Industri Profesional No. 45, Jakarta Selatan, 12345, Indonesia
+                                    Suncity Square, Ruko, Jl. Mayor Madmuin Hasibuan No.45 Blok A, Bekasi Selatan, Bekasi
                                 </p>
                             </div>
                             <div className="flex items-center">
                                 <span className="material-icons-outlined text-primary mr-4 text-xl">phone</span>
-                                <p className="text-slate-500 text-sm font-bold">(021) 555-0123</p>
+                                <p className="text-slate-500 text-sm font-bold">(021) 88869010, 88869021</p>
                             </div>
                             <div className="flex items-center">
                                 <span className="material-icons-outlined text-primary mr-4 text-xl">mail</span>
-                                <p className="text-slate-500 text-sm">info@lspa3i.or.id</p>
+                                <p className="text-slate-500 text-sm">alatangkatangkutindonesia@gmail.com</p>
                             </div>
                         </div>
                     </div>
@@ -100,6 +102,16 @@ const Footer = () => {
                         <a href="#" className="hover:text-primary transition-colors">Privacy Policy</a>
                         <a href="#" className="hover:text-primary transition-colors">Terms of Service</a>
                         <a href="#" className="hover:text-primary transition-colors">Cookie Policy</a>
+                        {/* Admin Panel - Only visible for admin and superadmin */}
+                        {isAdmin() && (
+                            <Link
+                                href="/admin"
+                                className="hover:text-primary transition-colors flex items-center gap-1.5"
+                            >
+                                <span className="material-icons-outlined text-[14px]">admin_panel_settings</span>
+                                Admin Panel
+                            </Link>
+                        )}
                     </div>
                 </div>
             </div>

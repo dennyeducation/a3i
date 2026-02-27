@@ -1,7 +1,19 @@
 {
   "permissions": {
     "allow": [
-      "Bash(cat:*)"
+      "Bash(cat:*)",
+      "Bash(netstat -ano)",
+      "Bash(findstr \":3000 :3001 :3002\")",
+      "Bash(findstr \"LISTENING\")",
+      "Bash(pnpm run dev)",
+      "Bash(node scripts/seed-sample-data.js)",
+      "Bash(findstr \":3000\")",
+      "Bash(dir /B /S *.jsx)",
+      "Bash(findstr /V \"node_modules .next\")",
+      "Bash(node --env-file=.env -e \":*)",
+      "Bash(node --env-file=.env -e \"import\\(''./lib/db.js''\\).then\\(async \\({query}\\)=>{const r=await query\\(\"\"SELECT column_name,data_type FROM information_schema.columns WHERE table_name=''applications'' ORDER BY ordinal_position\"\"\\);console.log\\(JSON.stringify\\(r.rows\\)\\);process.exit\\(0\\);}\\)\")",
+      "Bash(node --env-file=.env scripts/run-migration-004.js)",
+      "Bash(node scripts/run-migration-006.js)"
     ],
     "deny": [],
     "ask": []

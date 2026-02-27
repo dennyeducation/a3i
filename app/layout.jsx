@@ -1,6 +1,7 @@
 import './globals.css';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import { AuthProvider } from '@/contexts/AuthContext';
 
 export const metadata = {
     title: 'LSP A3I - Lembaga Sertifikasi Profesi Alat Angkat dan Angkut Indonesia',
@@ -25,11 +26,13 @@ export default function RootLayout({ children }) {
                 />
             </head>
             <body className="min-h-screen bg-background-dark text-slate-100 font-display flex flex-col">
-                <Navbar />
-                <main className="flex-grow">
-                    {children}
-                </main>
-                <Footer />
+                <AuthProvider>
+                    <Navbar />
+                    <main className="flex-grow">
+                        {children}
+                    </main>
+                    <Footer />
+                </AuthProvider>
             </body>
         </html>
     );

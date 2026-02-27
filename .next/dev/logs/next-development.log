@@ -1,6 +1,17 @@
-[00:00:02.650] Server  LOG     ✓ Ready in 1732ms
-[00:00:31.497] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:31.498] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+[00:00:01.991] Server  LOG     ✓ Ready in 1348ms
+[00:00:04.672] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:04.963] Browser WARN    Image with src "/assets/logoa3i.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:00:06.487] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:08.025] Server  ERROR   (node:20044) Warning: SECURITY WARNING: The SSL modes 'prefer', 'require', and 'verify-ca' are treated as aliases for 'verify-full'.
+In the next major version (pg-connection-string v3.0.0 and pg v9.0.0), these modes will adopt standard libpq semantics, which have weaker security guarantees.
+
+To prepare for this change:
+- If you want the current behavior, explicitly use 'sslmode=verify-full'
+- If you want libpq compatibility now, use 'uselibpqcompat=true&sslmode=require'
+
+See https://www.postgresql.org/docs/current/libpq-ssl.html for libpq SSL mode definitions.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[00:00:08.208] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
 
 - A server/client branch `if (typeof window !== 'undefined')`.
 - Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
@@ -18,7 +29,7 @@ It can also happen if the client has a browser extension installed which messes 
         <ReplaySsrOnlyErrors>
         <DevRootHTTPAccessFallbackBoundary>
           <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
-            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+            <HTTPAccessFallbackErrorBoundary pathname="/asesor" notFound={<NotAllowedRootHTTPFallbackError>} ...>
               <RedirectBoundary>
                 <RedirectErrorBoundary router={{...}}>
                   <Head headCacheNode={{rsc:<Fragment>, ...}}>
@@ -34,364 +45,831 @@ It can also happen if the client has a browser extension installed which messes 
                       <link>
                       <script>
                       <script>
+                      <script>
                       <RootLayout>
                         <html lang="id">
                           <head>
                           <body
                             className="min-h-screen bg-background-dark text-slate-100 font-display flex flex-col"
--                           __processed_d9dd744a-3d90-4e63-9ab9-c4a44dfdec84__="true"
+-                           __processed_3dd5d3e7-51c5-4c7a-b599-da88d05b1114__="true"
 -                           bis_register="W3sibWFzdGVyIjp0cnVlLCJleHRlbnNpb25JZCI6ImVwcGlvY2VtaG1ubGJoanBsY2drb2ZjaWll..."
                           >
-                            <Navbar>
-                              <header className="fixed top-...">
-                                <div
-                                  className="container-standard h-full"
--                                 bis_skin_checked="1"
-                                >
+                            <AuthProvider>
+                              <Navbar>
+                                <header className="fixed top-...">
                                   <div
-                                    className="flex justify-between items-center h-full"
+                                    className="container-standard h-full"
 -                                   bis_skin_checked="1"
                                   >
-                                    <LinkComponent href="/" className="flex items...">
-                                      <a className="flex items..." ref={function} onClick={function onClick} ...>
-                                        <div
-                                          className="w-10 h-10 bg-primary flex items-center justify-center rounded tra..."
--                                         bis_skin_checked="1"
-                                        >
-                                        <div
--                                         bis_skin_checked="1"
-                                        >
-                                    <nav className="hidden md:...">
-                                      <LinkComponent>
-                                      <LinkComponent>
-                                      <LinkComponent>
-                                      <LinkComponent>
-                                      <LinkComponent>
-                                      <LinkComponent>
-                                      <LinkComponent>
-                                      <LinkComponent>
-                                      <div
-                                        className="pl-2 flex items-center gap-3"
--                                       bis_skin_checked="1"
-                                      >
                                     <div
-                                      className="md:hidden"
+                                      className="flex justify-between items-center h-full"
 -                                     bis_skin_checked="1"
                                     >
-                            ...
-                              <SegmentViewNode type="page" pagePath="page.jsx">
-                                <SegmentTrieNode>
-                                <Beranda>
-                                  <Beranda>
-                                    <section className="relative m...">
+                                      <LinkComponent href="/" className="flex items...">
+                                        <a className="flex items..." ref={function} onClick={function onClick} ...>
+                                          <div
+                                            className="bg-white rounded-md p-1 flex-shrink-0 transition-transform grou..."
+-                                           bis_skin_checked="1"
+                                          >
+                                          <div
+                                            className="leading-none"
+-                                           bis_skin_checked="1"
+                                          >
+                                      <nav className="hidden md:...">
+                                        <LinkComponent>
+                                        <LinkComponent>
+                                        <LinkComponent>
+                                        <LinkComponent>
+                                        <LinkComponent>
+                                        <LinkComponent>
+                                        <LinkComponent>
+                                        <LinkComponent>
+                                        <div
+                                          className="pl-2 flex items-center gap-3"
+-                                         bis_skin_checked="1"
+                                        >
                                       <div
-                                        className="container-standard relative z-10 pt-20"
+                                        className="md:hidden"
+-                                       bis_skin_checked="1"
+                                      >
+                              ...
+                                <ClientPageRoot Component={function AsesorTuk} serverProvidedParams={{...}}>
+                                  <AsesorTuk params={Promise} searchParams={Promise}>
+                                    <section className="relative h...">
+                                      <div
+                                        className="absolute inset-0 z-0"
+-                                       bis_skin_checked="1"
+                                      >
+                                        <img>
+                                        <div
+                                          className="absolute inset-0 bg-gradient-to-t from-deep-black via-deep-black/..."
+-                                         bis_skin_checked="1"
+                                        >
+                                      <div
+                                        className="relative z-10 text-center px-6 max-w-7xl mx-auto"
+-                                       bis_skin_checked="1"
+                                      >
+                                    <section className="max-w-7xl ...">
+                                      <div
+                                        className="rounded-2xl overflow-hidden border border-primary/20 shadow-2xl"
 -                                       bis_skin_checked="1"
                                       >
                                         <div
-                                          className="max-w-3xl"
+                                          className="bg-[#111] px-8 py-5 flex flex-col md:flex-row md:items-center jus..."
 -                                         bis_skin_checked="1"
                                         >
                                           <div
-                                            className="inline-flex items-center space-x-2 bg-primary/10 border border-..."
 -                                           bis_skin_checked="1"
                                           >
-                                          <h1>
-                                          <p>
                                           <div
-                                            className="flex flex-col sm:flex-row gap-5"
+                                            className="flex gap-8 text-center flex-shrink-0"
 -                                           bis_skin_checked="1"
                                           >
-                                      <div
-                                        className="absolute bottom-0 w-full hidden lg:block translate-y-1/2 z-20"
--                                       bis_skin_checked="1"
-                                      >
+                                            <div
+-                                             bis_skin_checked="1"
+                                            >
+                                            <div
+                                              className="w-px bg-primary/20"
+-                                             bis_skin_checked="1"
+                                            >
+                                            <div
+-                                             bis_skin_checked="1"
+                                            >
+                                        ...
+                                    <main className="relative z...">
+                                      <section className="max-w-7xl ...">
                                         <div
-                                          className="container-standard"
+                                          className="bg-[#111] border border-primary/15 p-6 rounded-xl shadow-2xl flex..."
 -                                         bis_skin_checked="1"
                                         >
                                           <div
-                                            className="grid grid-cols-4 gap-0 bg-background-dark/80 backdrop-blur-xl r..."
--                                           bis_skin_checked="1"
-                                          >
-                                            <div
-                                              className="p-8 text-center border-r border-white/10 hover:bg-white/5 tra..."
--                                             bis_skin_checked="1"
-                                            >
-                                              <div
-                                                className="text-4xl font-extrabold text-primary mb-1"
--                                               bis_skin_checked="1"
-                                              >
-+                                               5000+
-                                              <div
-                                                className="text-[10px] uppercase tracking-[0.2em] text-slate-400 font-..."
--                                               bis_skin_checked="1"
-                                              >
-+                                               Tenaga Kerja Tersertifikasi
-                                            <div
-                                              className="p-8 text-center border-r border-white/10 hover:bg-white/5 tra..."
--                                             bis_skin_checked="1"
-                                            >
-                                              <div
-                                                className="text-4xl font-extrabold text-primary mb-1"
--                                               bis_skin_checked="1"
-                                              >
-+                                               12+
-                                              <div
-                                                className="text-[10px] uppercase tracking-[0.2em] text-slate-400 font-..."
--                                               bis_skin_checked="1"
-                                              >
-+                                               Skema Kompetensi
-                                            <div
-                                              className="p-8 text-center border-r border-white/10 hover:bg-white/5 tra..."
--                                             bis_skin_checked="1"
-                                            >
-                                              <div
-                                                className="text-4xl font-extrabold text-primary mb-1"
--                                               bis_skin_checked="1"
-                                              >
-+                                               45+
-                                              <div
-                                                className="text-[10px] uppercase tracking-[0.2em] text-slate-400 font-..."
--                                               bis_skin_checked="1"
-                                              >
-+                                               Asesor Berpengalaman
-                                            <div
-                                              className="p-8 text-center hover:bg-white/5 transition-colors"
--                                             bis_skin_checked="1"
-                                            >
-                                              <div
-                                                className="text-4xl font-extrabold text-primary mb-1"
--                                               bis_skin_checked="1"
-                                              >
-+                                               100%
-                                              <div
-                                                className="text-[10px] uppercase tracking-[0.2em] text-slate-400 font-..."
--                                               bis_skin_checked="1"
-                                              >
-+                                               Standar BNSP
-                                  <Beranda>
-                                    <section className="section-pa...">
-                                      <div
-                                        className="container-standard"
--                                       bis_skin_checked="1"
-                                      >
-                                        <div
-                                          className="flex flex-col lg:flex-row items-center gap-20"
--                                         bis_skin_checked="1"
-                                        >
-                                          <div
-                                            className="lg:w-1/2"
--                                           bis_skin_checked="1"
-                                          >
-                                            <div
-                                              className="relative group"
--                                             bis_skin_checked="1"
-                                            >
-                                              <div
-                                                className="absolute -top-6 -left-6 w-32 h-32 border-l-4 border-t-4 bor..."
--                                               bis_skin_checked="1"
-                                              >
-                                              <div
-                                                className="absolute -bottom-6 -right-6 w-32 h-32 border-r-4 border-b-4..."
--                                               bis_skin_checked="1"
-                                              >
-                                              <img>
-                                              <div
-                                                className="absolute -bottom-8 -right-8 bg-primary p-8 rounded shadow-2..."
--                                               bis_skin_checked="1"
-                                              >
-                                          <div
-                                            className="lg:w-1/2"
--                                           bis_skin_checked="1"
-                                          >
-                                            <div
-                                              className="inline-block text-primary font-bold uppercase tracking-[0.3em..."
--                                             bis_skin_checked="1"
-                                            >
-+                                             Tentang Kami
-                                            <h2>
-                                            <p>
-                                            <div
-                                              className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12"
--                                             bis_skin_checked="1"
-                                            >
-                                              <div
-                                                className="flex items-start space-x-4"
--                                               bis_skin_checked="1"
-                                              >
-                                                <div
-                                                  className="w-10 h-10 rounded bg-primary/10 flex items-center justify..."
--                                                 bis_skin_checked="1"
-                                                >
-                                                <div
--                                                 bis_skin_checked="1"
-                                                >
-                                              <div
-                                                className="flex items-start space-x-4"
--                                               bis_skin_checked="1"
-                                              >
-                                                <div
-                                                  className="w-10 h-10 rounded bg-primary/10 flex items-center justify..."
--                                                 bis_skin_checked="1"
-                                                >
-                                                <div
--                                                 bis_skin_checked="1"
-                                                >
-                                            ...
-                                  <Beranda>
-                                    <section className="section-pa...">
-                                      <div
-                                        className="container-standard relative z-10"
--                                       bis_skin_checked="1"
-                                      >
-                                        <div
-                                          className="text-center mb-20"
--                                         bis_skin_checked="1"
-                                        >
-                                          <h2>
-                                          <div
-                                            className="h-1.5 w-24 bg-primary mx-auto rounded-full mb-8"
+                                            className="relative flex-grow w-full"
 -                                           bis_skin_checked="1"
                                           >
                                           ...
                                         <div
-                                          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
+                                          className="bg-[#0a0a0a] rounded-xl border border-primary/20 overflow-hidden ..."
 -                                         bis_skin_checked="1"
                                         >
                                           <div
-                                            className="bg-surface-dark p-10 rounded border border-white/5 hover:border..."
+                                            className="overflow-x-auto"
 -                                           bis_skin_checked="1"
                                           >
-                                            <div
-                                              className="w-16 h-16 bg-primary/5 rounded flex items-center justify-cent..."
--                                             bis_skin_checked="1"
-                                            >
-                                            ...
-                                          <div
-                                            className="bg-surface-dark p-10 rounded border border-white/5 hover:border..."
--                                           bis_skin_checked="1"
-                                          >
-                                            <div
-                                              className="w-16 h-16 bg-primary/5 rounded flex items-center justify-cent..."
--                                             bis_skin_checked="1"
-                                            >
-                                            ...
-                                          <div
-                                            className="bg-surface-dark p-10 rounded border border-white/5 hover:border..."
--                                           bis_skin_checked="1"
-                                          >
-                                            <div
-                                              className="w-16 h-16 bg-primary/5 rounded flex items-center justify-cent..."
--                                             bis_skin_checked="1"
-                                            >
-                                            ...
-                                          <div
-                                            className="bg-surface-dark p-10 rounded border border-white/5 hover:border..."
--                                           bis_skin_checked="1"
-                                          >
-                                            <div
-                                              className="w-16 h-16 bg-primary/5 rounded flex items-center justify-cent..."
--                                             bis_skin_checked="1"
-                                            >
-                                            ...
-                                  <Beranda>
-                                    <section className="py-20 bg-b...">
-                                      <div
-                                        className="container-standard"
--                                       bis_skin_checked="1"
-                                      >
                                         <div
-                                          className="flex flex-col items-center"
+                                          className="mt-8 flex flex-col md:flex-row justify-between items-center gap-6"
 -                                         bis_skin_checked="1"
                                         >
-                                          <p>
+                                      <section className="mt-20 pt-1...">
+                                        <div
+                                          className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center jus..."
+-                                         bis_skin_checked="1"
+                                        >
                                           <div
-                                            className="flex flex-wrap justify-center items-center gap-16 opacity-30 gr..."
 -                                           bis_skin_checked="1"
                                           >
-                                            <div
-                                              className="h-10 w-32 bg-slate-400 rounded-sm flex items-center justify-c..."
--                                             bis_skin_checked="1"
-                                            >
-+                                             LOGO BNSP
-                                            <div
-                                              className="h-10 w-32 bg-slate-400 rounded-sm flex items-center justify-c..."
--                                             bis_skin_checked="1"
-                                            >
-+                                             KEMNAKER
-                                            <div
-                                              className="h-10 w-32 bg-slate-400 rounded-sm flex items-center justify-c..."
--                                             bis_skin_checked="1"
-                                            >
-+                                             ASOSIASI A3I
-                                            <div
-                                              className="h-10 w-32 bg-slate-400 rounded-sm flex items-center justify-c..."
--                                             bis_skin_checked="1"
-                                            >
-+                                             ISO 9001
-                            <Footer>
-                              <footer className="bg-[#08080...">
-                                <div
-                                  className="container-standard"
--                                 bis_skin_checked="1"
-                                >
+                                          ...
+                              <Footer>
+                                <footer className="bg-[#08080...">
                                   <div
-                                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-20"
+                                    className="container-standard"
 -                                   bis_skin_checked="1"
                                   >
                                     <div
-                                      className="space-y-8"
+                                      className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-20"
 -                                     bis_skin_checked="1"
                                     >
                                       <div
-                                        className="flex items-center space-x-3"
+                                        className="space-y-8"
 -                                       bis_skin_checked="1"
                                       >
                                         <div
-                                          className="w-10 h-10 bg-primary flex items-center justify-center rounded"
+                                          className="flex items-center space-x-3"
 -                                         bis_skin_checked="1"
                                         >
-                                        ...
+                                          <div
+                                            className="w-10 h-10 bg-primary flex items-center justify-center rounded"
+-                                           bis_skin_checked="1"
+                                          >
+                                          ...
+                                        <p>
+                                        <div
+                                          className="flex space-x-4"
+-                                         bis_skin_checked="1"
+                                        >
+                                      <div
+-                                       bis_skin_checked="1"
+                                      >
+                                      <div
+-                                       bis_skin_checked="1"
+                                      >
+                                        <h4>
+                                        <div
+                                          className="space-y-6"
+-                                         bis_skin_checked="1"
+                                        >
+                                          <div
+                                            className="flex items-start"
+-                                           bis_skin_checked="1"
+                                          >
+                                          <div
+                                            className="flex items-center"
+-                                           bis_skin_checked="1"
+                                          >
+                                          <div
+                                            className="flex items-center"
+-                                           bis_skin_checked="1"
+                                          >
+                                      <div
+-                                       bis_skin_checked="1"
+                                      >
+                                    <div
+                                      className="pt-10 border-t border-white/5 flex flex-col md:flex-row justify-betwe..."
+-                                     bis_skin_checked="1"
+                                    >
                                       <p>
                                       <div
-                                        className="flex space-x-4"
+                                        className="flex space-x-8 text-[11px] font-bold text-slate-600 uppercase track..."
 -                                       bis_skin_checked="1"
                                       >
-                                    <div
--                                     bis_skin_checked="1"
-                                    >
-                                    <div
--                                     bis_skin_checked="1"
-                                    >
-                                      <h4>
-                                      <div
-                                        className="space-y-6"
--                                       bis_skin_checked="1"
-                                      >
-                                        <div
-                                          className="flex items-start"
--                                         bis_skin_checked="1"
-                                        >
-                                        <div
-                                          className="flex items-center"
--                                         bis_skin_checked="1"
-                                        >
-                                        <div
-                                          className="flex items-center"
--                                         bis_skin_checked="1"
-                                        >
-                                    <div
--                                     bis_skin_checked="1"
-                                    >
-                                  <div
-                                    className="pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between..."
--                                   bis_skin_checked="1"
-                                  >
-                                    <p>
-                                    <div
-                                      className="flex space-x-8 text-[11px] font-bold text-slate-600 uppercase trackin..."
--                                     bis_skin_checked="1"
-                                    >
                   ...
 
+[00:00:08.208] Browser WARN    Image with src "/assets/logoa3i.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:00:08.924] Server  LOG     Database connected successfully
+[00:00:09.030] Server  LOG     Executed query {}
+[00:00:09.475] Server  LOG     Database connected successfully
+[00:00:09.480] Server  LOG     Database connected successfully
+[00:00:09.511] Server  LOG     Executed query {}
+[00:00:09.526] Server  LOG     Executed query {}
+[00:00:26.233] Server  LOG     Executed query {}
+[00:00:26.237] Server  LOG     Executed query {}
+[00:00:26.274] Server  LOG     Executed query {}
+[00:00:26.316] Server  LOG     Executed query {}
+[00:00:26.333] Server  LOG     Executed query {}
+[00:00:26.335] Server  LOG     Executed query {}
+[00:00:26.347] Server  LOG     Executed query {}
+[00:00:26.385] Server  LOG     Executed query {}
+[00:00:26.426] Server  LOG     Executed query {}
+[00:00:26.455] Server  LOG     Executed query {}
+[00:00:26.507] Server  LOG     Executed query {}
+[00:00:26.569] Server  LOG     Executed query {}
+[00:00:26.601] Server  LOG     Executed query {}
+[00:00:26.639] Server  LOG     Executed query {}
+[00:00:26.665] Server  LOG     Executed query {}
+[00:00:26.689] Server  LOG     Executed query {}
+[00:00:26.713] Server  LOG     Executed query {}
+[00:00:26.785] Server  LOG     Executed query {}
+[00:00:49.185] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:49.606] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/admin/asesor" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head headCacheNode={{rsc:<Fragment>, ...}}>
+                    <__next_viewport_boundary__>
+                    <MetadataWrapper>
+                      <div
+                        hidden={true}
+-                       bis_skin_checked="1"
+                      >
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.jsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <script>
+                      <script>
+                      <RootLayout>
+                        <html lang="id">
+                          <head>
+                          <body
+                            className="min-h-screen bg-background-dark text-slate-100 font-display flex flex-col"
+-                           __processed_851c609e-a1a1-4bd5-a3ca-875a2393d7af__="true"
+-                           bis_register="W3sibWFzdGVyIjp0cnVlLCJleHRlbnNpb25JZCI6ImVwcGlvY2VtaG1ubGJoanBsY2drb2ZjaWll..."
+                          >
+                            <AuthProvider>
+                              <Navbar>
+                                <header className="fixed top-...">
+                                  <div
+                                    className="container-standard h-full"
+-                                   bis_skin_checked="1"
+                                  >
+                                    <div
+                                      className="flex justify-between items-center h-full"
+-                                     bis_skin_checked="1"
+                                    >
+                                      <LinkComponent href="/" className="flex items...">
+                                        <a className="flex items..." ref={function} onClick={function onClick} ...>
+                                          <div
+                                            className="bg-white rounded-md p-1 flex-shrink-0 transition-transform grou..."
+-                                           bis_skin_checked="1"
+                                          >
+                                          <div
+                                            className="leading-none"
+-                                           bis_skin_checked="1"
+                                          >
+                                      <nav className="hidden md:...">
+                                        <LinkComponent>
+                                        <LinkComponent>
+                                        <LinkComponent>
+                                        <LinkComponent>
+                                        <LinkComponent>
+                                        <LinkComponent>
+                                        <LinkComponent>
+                                        <LinkComponent>
+                                        <div
+                                          className="pl-2 flex items-center gap-3"
+-                                         bis_skin_checked="1"
+                                        >
+                                      <div
+                                        className="md:hidden"
+-                                       bis_skin_checked="1"
+                                      >
+                              ...
+                                <SegmentViewNode type="page" pagePath="admin/ases...">
+                                  <SegmentTrieNode>
+                                  <ClientPageRoot Component={function AdminAsesorPage} serverProvidedParams={{...}}>
+                                    <AdminAsesorPage params={Promise} searchParams={Promise}>
+                                      <div
+                                        className="min-h-screen bg-gray-950 p-6"
+-                                       bis_skin_checked="1"
+                                      >
+                                        <div
+                                          className="flex items-center gap-3 mb-6"
+-                                         bis_skin_checked="1"
+                                        >
+                                          <LinkComponent>
+                                          <div
+-                                           bis_skin_checked="1"
+                                          >
+                                        <div
+                                          className="flex flex-col sm:flex-row gap-3 mb-6"
+-                                         bis_skin_checked="1"
+                                        >
+                                          <form onSubmit={function handleSearch} className="flex gap-2...">
+                                            <div
+                                              className="relative flex-1"
+-                                             bis_skin_checked="1"
+                                            >
+                                            ...
+                                          ...
+                                        <div
+                                          className="mb-3 text-sm text-gray-400"
+-                                         bis_skin_checked="1"
+                                        >
+                                        <div
+                                          className="bg-gray-900 rounded-xl border border-gray-800 overflow-hidden"
+-                                         bis_skin_checked="1"
+                                        >
+                                          <div
+                                            className="overflow-x-auto"
+-                                           bis_skin_checked="1"
+                                          >
+                              <Footer>
+                                <footer className="bg-[#08080...">
+                                  <div
+                                    className="container-standard"
+-                                   bis_skin_checked="1"
+                                  >
+                                    <div
+                                      className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-20"
+-                                     bis_skin_checked="1"
+                                    >
+                                      <div
+                                        className="space-y-8"
+-                                       bis_skin_checked="1"
+                                      >
+                                        <div
+                                          className="flex items-center space-x-3"
+-                                         bis_skin_checked="1"
+                                        >
+                                          <div
+                                            className="w-10 h-10 bg-primary flex items-center justify-center rounded"
+-                                           bis_skin_checked="1"
+                                          >
+                                          ...
+                                        <p>
+                                        <div
+                                          className="flex space-x-4"
+-                                         bis_skin_checked="1"
+                                        >
+                                      <div
+-                                       bis_skin_checked="1"
+                                      >
+                                      <div
+-                                       bis_skin_checked="1"
+                                      >
+                                        <h4>
+                                        <div
+                                          className="space-y-6"
+-                                         bis_skin_checked="1"
+                                        >
+                                          <div
+                                            className="flex items-start"
+-                                           bis_skin_checked="1"
+                                          >
+                                          <div
+                                            className="flex items-center"
+-                                           bis_skin_checked="1"
+                                          >
+                                          <div
+                                            className="flex items-center"
+-                                           bis_skin_checked="1"
+                                          >
+                                      <div
+-                                       bis_skin_checked="1"
+                                      >
+                                    <div
+                                      className="pt-10 border-t border-white/5 flex flex-col md:flex-row justify-betwe..."
+-                                     bis_skin_checked="1"
+                                    >
+                                      <p>
+                                      <div
+                                        className="flex space-x-8 text-[11px] font-bold text-slate-600 uppercase track..."
+-                                       bis_skin_checked="1"
+                                      >
+                  ...
+
+[00:00:49.606] Browser WARN    Image with src "/assets/logoa3i.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:00:49.609] Server  LOG     Executed query {}
+[00:00:52.226] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:52.624] Server  LOG     Executed query {}
+[00:00:52.781] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/admin/asesor" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head headCacheNode={{rsc:<Fragment>, ...}}>
+                    <__next_viewport_boundary__>
+                    <MetadataWrapper>
+                      <div
+                        hidden={true}
+-                       bis_skin_checked="1"
+                      >
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.jsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <script>
+                      <script>
+                      <RootLayout>
+                        <html lang="id">
+                          <head>
+                          <body
+                            className="min-h-screen bg-background-dark text-slate-100 font-display flex flex-col"
+-                           __processed_e405b164-9e73-4099-9e84-6656f74e1a14__="true"
+-                           bis_register="W3sibWFzdGVyIjp0cnVlLCJleHRlbnNpb25JZCI6ImVwcGlvY2VtaG1ubGJoanBsY2drb2ZjaWll..."
+                          >
+                            <AuthProvider>
+                              <Navbar>
+                                <header className="fixed top-...">
+                                  <div
+                                    className="container-standard h-full"
+-                                   bis_skin_checked="1"
+                                  >
+                                    <div
+                                      className="flex justify-between items-center h-full"
+-                                     bis_skin_checked="1"
+                                    >
+                                      <LinkComponent href="/" className="flex items...">
+                                        <a className="flex items..." ref={function} onClick={function onClick} ...>
+                                          <div
+                                            className="bg-white rounded-md p-1 flex-shrink-0 transition-transform grou..."
+-                                           bis_skin_checked="1"
+                                          >
+                                          <div
+                                            className="leading-none"
+-                                           bis_skin_checked="1"
+                                          >
+                                      <nav className="hidden md:...">
+                                        <LinkComponent>
+                                        <LinkComponent>
+                                        <LinkComponent>
+                                        <LinkComponent>
+                                        <LinkComponent>
+                                        <LinkComponent>
+                                        <LinkComponent>
+                                        <LinkComponent>
+                                        <div
+                                          className="pl-2 flex items-center gap-3"
+-                                         bis_skin_checked="1"
+                                        >
+                                      <div
+                                        className="md:hidden"
+-                                       bis_skin_checked="1"
+                                      >
+                              ...
+                                <SegmentViewNode type="page" pagePath="admin/ases...">
+                                  <SegmentTrieNode>
+                                  <ClientPageRoot Component={function AdminAsesorPage} serverProvidedParams={{...}}>
+                                    <AdminAsesorPage params={Promise} searchParams={Promise}>
+                                      <div
+                                        className="min-h-screen bg-gray-950 p-6"
+-                                       bis_skin_checked="1"
+                                      >
+                                        <div
+                                          className="flex items-center gap-3 mb-6"
+-                                         bis_skin_checked="1"
+                                        >
+                                          <LinkComponent>
+                                          <div
+-                                           bis_skin_checked="1"
+                                          >
+                                        <div
+                                          className="flex flex-col sm:flex-row gap-3 mb-6"
+-                                         bis_skin_checked="1"
+                                        >
+                                          <form onSubmit={function handleSearch} className="flex gap-2...">
+                                            <div
+                                              className="relative flex-1"
+-                                             bis_skin_checked="1"
+                                            >
+                                            ...
+                                          ...
+                                        <div
+                                          className="mb-3 text-sm text-gray-400"
+-                                         bis_skin_checked="1"
+                                        >
+                                        <div
+                                          className="bg-gray-900 rounded-xl border border-gray-800 overflow-hidden"
+-                                         bis_skin_checked="1"
+                                        >
+                                          <div
+                                            className="overflow-x-auto"
+-                                           bis_skin_checked="1"
+                                          >
+                              <Footer>
+                                <footer className="bg-[#08080...">
+                                  <div
+                                    className="container-standard"
+-                                   bis_skin_checked="1"
+                                  >
+                                    <div
+                                      className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-20"
+-                                     bis_skin_checked="1"
+                                    >
+                                      <div
+                                        className="space-y-8"
+-                                       bis_skin_checked="1"
+                                      >
+                                        <div
+                                          className="flex items-center space-x-3"
+-                                         bis_skin_checked="1"
+                                        >
+                                          <div
+                                            className="w-10 h-10 bg-primary flex items-center justify-center rounded"
+-                                           bis_skin_checked="1"
+                                          >
+                                          ...
+                                        <p>
+                                        <div
+                                          className="flex space-x-4"
+-                                         bis_skin_checked="1"
+                                        >
+                                      <div
+-                                       bis_skin_checked="1"
+                                      >
+                                      <div
+-                                       bis_skin_checked="1"
+                                      >
+                                        <h4>
+                                        <div
+                                          className="space-y-6"
+-                                         bis_skin_checked="1"
+                                        >
+                                          <div
+                                            className="flex items-start"
+-                                           bis_skin_checked="1"
+                                          >
+                                          <div
+                                            className="flex items-center"
+-                                           bis_skin_checked="1"
+                                          >
+                                          <div
+                                            className="flex items-center"
+-                                           bis_skin_checked="1"
+                                          >
+                                      <div
+-                                       bis_skin_checked="1"
+                                      >
+                                    <div
+                                      className="pt-10 border-t border-white/5 flex flex-col md:flex-row justify-betwe..."
+-                                     bis_skin_checked="1"
+                                    >
+                                      <p>
+                                      <div
+                                        className="flex space-x-8 text-[11px] font-bold text-slate-600 uppercase track..."
+-                                       bis_skin_checked="1"
+                                      >
+                  ...
+
+[00:00:52.781] Browser WARN    Image with src "/assets/logoa3i.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:04:52.085] Server  LOG     ✓ Compiled in 3.6s
+[00:04:56.873] Server  LOG     ✓ Compiled in 313ms
+[00:05:02.099] Server  LOG     ✓ Compiled in 349ms
+[00:05:41.359] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:05:41.751] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/admin/asesor" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head headCacheNode={{rsc:<Fragment>, ...}}>
+                    <__next_viewport_boundary__>
+                    <MetadataWrapper>
+                      <div
+                        hidden={true}
+-                       bis_skin_checked="1"
+                      >
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.jsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <script>
+                      <script>
+                      <RootLayout>
+                        <html lang="id">
+                          <head>
+                          <body
+                            className="min-h-screen bg-background-dark text-slate-100 font-display flex flex-col"
+-                           __processed_c90750db-35eb-4642-98f8-2c4065528c18__="true"
+-                           bis_register="W3sibWFzdGVyIjp0cnVlLCJleHRlbnNpb25JZCI6ImVwcGlvY2VtaG1ubGJoanBsY2drb2ZjaWll..."
+                          >
+                            <AuthProvider>
+                              <Navbar>
+                                <header className="fixed top-...">
+                                  <div
+                                    className="container-standard h-full"
+-                                   bis_skin_checked="1"
+                                  >
+                                    <div
+                                      className="flex justify-between items-center h-full"
+-                                     bis_skin_checked="1"
+                                    >
+                                      <LinkComponent href="/" className="flex items...">
+                                        <a className="flex items..." ref={function} onClick={function onClick} ...>
+                                          <div
+                                            className="bg-white rounded-md p-1 flex-shrink-0 transition-transform grou..."
+-                                           bis_skin_checked="1"
+                                          >
+                                          <div
+                                            className="leading-none"
+-                                           bis_skin_checked="1"
+                                          >
+                                      <nav className="hidden md:...">
+                                        <LinkComponent>
+                                        <LinkComponent>
+                                        <LinkComponent>
+                                        <LinkComponent>
+                                        <LinkComponent>
+                                        <LinkComponent>
+                                        <LinkComponent>
+                                        <LinkComponent>
+                                        <div
+                                          className="pl-2 flex items-center gap-3"
+-                                         bis_skin_checked="1"
+                                        >
+                                      <div
+                                        className="md:hidden"
+-                                       bis_skin_checked="1"
+                                      >
+                              ...
+                                <SegmentViewNode type="page" pagePath="admin/ases...">
+                                  <SegmentTrieNode>
+                                  <ClientPageRoot Component={function AdminAsesorPage} serverProvidedParams={{...}}>
+                                    <AdminAsesorPage params={Promise} searchParams={Promise}>
+                                      <div
+                                        className="min-h-screen bg-gray-950 p-6"
+-                                       bis_skin_checked="1"
+                                      >
+                                        <div
+                                          className="flex items-center gap-3 mb-6"
+-                                         bis_skin_checked="1"
+                                        >
+                                          <LinkComponent>
+                                          <div
+-                                           bis_skin_checked="1"
+                                          >
+                                        <div
+                                          className="flex flex-col sm:flex-row gap-3 mb-6"
+-                                         bis_skin_checked="1"
+                                        >
+                                          <form onSubmit={function handleSearch} className="flex gap-2...">
+                                            <div
+                                              className="relative flex-1"
+-                                             bis_skin_checked="1"
+                                            >
+                                            ...
+                                          ...
+                                        <div
+                                          className="mb-3 text-sm text-gray-400"
+-                                         bis_skin_checked="1"
+                                        >
+                                        <div
+                                          className="bg-gray-900 rounded-xl border border-gray-800 overflow-hidden"
+-                                         bis_skin_checked="1"
+                                        >
+                                          <div
+                                            className="overflow-x-auto"
+-                                           bis_skin_checked="1"
+                                          >
+                              <Footer>
+                                <footer className="bg-[#08080...">
+                                  <div
+                                    className="container-standard"
+-                                   bis_skin_checked="1"
+                                  >
+                                    <div
+                                      className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-20"
+-                                     bis_skin_checked="1"
+                                    >
+                                      <div
+                                        className="space-y-8"
+-                                       bis_skin_checked="1"
+                                      >
+                                        <div
+                                          className="flex items-center space-x-3"
+-                                         bis_skin_checked="1"
+                                        >
+                                          <div
+                                            className="w-10 h-10 bg-primary flex items-center justify-center rounded"
+-                                           bis_skin_checked="1"
+                                          >
+                                          ...
+                                        <p>
+                                        <div
+                                          className="flex space-x-4"
+-                                         bis_skin_checked="1"
+                                        >
+                                      <div
+-                                       bis_skin_checked="1"
+                                      >
+                                      <div
+-                                       bis_skin_checked="1"
+                                      >
+                                        <h4>
+                                        <div
+                                          className="space-y-6"
+-                                         bis_skin_checked="1"
+                                        >
+                                          <div
+                                            className="flex items-start"
+-                                           bis_skin_checked="1"
+                                          >
+                                          <div
+                                            className="flex items-center"
+-                                           bis_skin_checked="1"
+                                          >
+                                          <div
+                                            className="flex items-center"
+-                                           bis_skin_checked="1"
+                                          >
+                                      <div
+-                                       bis_skin_checked="1"
+                                      >
+                                    <div
+                                      className="pt-10 border-t border-white/5 flex flex-col md:flex-row justify-betwe..."
+-                                     bis_skin_checked="1"
+                                    >
+                                      <p>
+                                      <div
+                                        className="flex space-x-8 text-[11px] font-bold text-slate-600 uppercase track..."
+-                                       bis_skin_checked="1"
+                                      >
+                  ...
+
+[00:05:41.751] Browser WARN    Image with src "/assets/logoa3i.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:05:41.888] Server  LOG     Database connected successfully
+[00:05:41.890] Server  LOG     Database connected successfully
+[00:05:41.919] Server  LOG     Database connected successfully
+[00:05:41.922] Server  LOG     Executed query {}
+[00:05:41.944] Server  LOG     Executed query {}
+[00:05:42.013] Server  LOG     Executed query {}
+[00:05:56.466] Server  WARN    Error: Route "/api/admin/asesor/[id]" used `params.id`. `params` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:05:56.544] Server  LOG     Executed query {}
+[00:06:06.061] Server  WARN    Error: Route "/api/admin/asesor/[id]" used `params.id`. `params` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:06:06.095] Server  LOG     Executed query {}
+[00:06:59.199] Server  WARN    Error: Route "/api/admin/asesor/[id]" used `params.id`. `params` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:06:59.279] Server  LOG     Executed query {}
+[00:08:38.695] Server  LOG     Database connected successfully
+[00:08:38.732] Server  LOG     Executed query {}
+[00:08:38.930] Server  LOG     Database connected successfully
+[00:08:38.931] Server  LOG     Database connected successfully
+[00:08:38.953] Server  LOG     Executed query {}
+[00:08:38.983] Server  LOG     Executed query {}
+[00:20:00.533] Server  LOG     Database connected successfully
+[00:20:00.534] Server  LOG     Database connected successfully
+[00:20:00.617] Server  LOG     Executed query {}
+[00:20:00.619] Server  LOG     Executed query {}
+[00:20:22.224] Server  LOG     Executed query {}
+[00:20:22.252] Server  LOG     Executed query {}
+[00:20:33.290] Server  LOG     Database connected successfully
+[00:20:33.320] Server  LOG     Executed query {}
+[00:20:33.377] Server  LOG     Executed query {}
+[00:20:33.426] Server  LOG     Executed query {}
+[00:21:08.797] Server  LOG     Executed query {}
+[00:21:08.840] Server  LOG     Executed query {}
+[00:21:08.859] Server  LOG     Executed query {}
+[00:21:21.677] Server  LOG     Executed query {}
+[00:21:21.726] Server  LOG     Executed query {}
+[00:21:21.745] Server  LOG     Executed query {}
+[00:21:37.227] Server  LOG     Executed query {}
+[00:21:37.289] Server  LOG     Executed query {}
+[00:21:37.310] Server  LOG     Executed query {}
+[00:22:13.319] Server  LOG     Executed query {}
+[00:22:13.385] Server  LOG     Executed query {}
+[00:22:13.406] Server  LOG     Executed query {}
+[00:22:19.616] Server  LOG     Executed query {}
+[00:22:19.619] Server  LOG     Executed query {}
+[00:22:45.806] Server  LOG     Executed query {}
+[00:22:45.817] Server  LOG     Executed query {}
+[00:22:45.881] Server  LOG     Executed query {}
+[00:22:45.905] Server  LOG     Executed query {}

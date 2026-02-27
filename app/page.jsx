@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 const Beranda = () => {
     return (
@@ -168,12 +169,25 @@ const Beranda = () => {
                 <div className="container-standard">
                     <div className="flex flex-col items-center">
                         <p className="text-[10px] uppercase tracking-[0.4em] text-slate-500 mb-12 font-extrabold">Didukung & Diakreditasi Oleh</p>
-                        <div className="flex flex-wrap justify-center items-center gap-16 opacity-30 grayscale hover:opacity-100 hover:grayscale-0 transition-all duration-500">
-                            {['LOGO BNSP', 'KEMNAKER', 'ASOSIASI A3I', 'ISO 9001'].map((partner) => (
-                                <div key={partner} className="h-10 w-32 bg-slate-400 rounded-sm flex items-center justify-center text-[10px] font-black text-black hover:bg-white transition-colors">
-                                    {partner}
-                                </div>
-                            ))}
+                        <div className="flex flex-wrap justify-center items-center gap-10">
+                            <div className="bg-white rounded-xl px-6 py-4 flex items-center justify-center opacity-70 hover:opacity-100 transition-opacity duration-300">
+                                <Image
+                                    src="/assets/logobnsp.png"
+                                    alt="BNSP"
+                                    width={140}
+                                    height={56}
+                                    className="h-14 w-auto object-contain"
+                                />
+                            </div>
+                            <div className="bg-white rounded-xl px-6 py-4 flex items-center justify-center opacity-70 hover:opacity-100 transition-opacity duration-300">
+                                <Image
+                                    src="/assets/kemnaker.png"
+                                    alt="Kementerian Ketenagakerjaan"
+                                    width={140}
+                                    height={56}
+                                    className="h-14 w-auto object-contain"
+                                />
+                            </div>
                         </div>
                     </div>
                 </div>
