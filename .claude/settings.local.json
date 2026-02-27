@@ -13,7 +13,9 @@
       "Bash(node --env-file=.env -e \":*)",
       "Bash(node --env-file=.env -e \"import\\(''./lib/db.js''\\).then\\(async \\({query}\\)=>{const r=await query\\(\"\"SELECT column_name,data_type FROM information_schema.columns WHERE table_name=''applications'' ORDER BY ordinal_position\"\"\\);console.log\\(JSON.stringify\\(r.rows\\)\\);process.exit\\(0\\);}\\)\")",
       "Bash(node --env-file=.env scripts/run-migration-004.js)",
-      "Bash(node scripts/run-migration-006.js)"
+      "Bash(node scripts/run-migration-006.js)",
+      "Bash(pnpm install)",
+      "Bash(git push origin master)"
     ],
     "deny": [],
     "ask": []

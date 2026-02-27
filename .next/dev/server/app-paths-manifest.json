@@ -1,12 +1,8 @@
 {
-  "/admin/asesor/page": "app/admin/asesor/page.js",
   "/admin/page": "app/admin/page.js",
-  "/api/admin/asesor/[id]/route": "app/api/admin/asesor/[id]/route.js",
-  "/api/admin/asesor/route": "app/api/admin/asesor/route.js",
   "/api/admin/stats/route": "app/api/admin/stats/route.js",
   "/api/admin/users/route": "app/api/admin/users/route.js",
-  "/api/asesor/route": "app/api/asesor/route.js",
   "/api/auth/me/route": "app/api/auth/me/route.js",
-  "/asesor/page": "app/asesor/page.js",
+  "/login/page": "app/login/page.js",
   "/page": "app/page.js"
 }
