@@ -1,13 +1,6 @@
 {
-  "/admin/page": "app/admin/page.js",
-  "/admin/schemes/page": "app/admin/schemes/page.js",
-  "/api/admin/schemes/[id]/route": "app/api/admin/schemes/[id]/route.js",
-  "/api/admin/schemes/route": "app/api/admin/schemes/route.js",
-  "/api/admin/stats/route": "app/api/admin/stats/route.js",
-  "/api/admin/upload/scheme/route": "app/api/admin/upload/scheme/route.js",
-  "/api/admin/users/route": "app/api/admin/users/route.js",
   "/api/auth/me/route": "app/api/auth/me/route.js",
-  "/api/sertifikasi/route": "app/api/sertifikasi/route.js",
   "/page": "app/page.js",
-  "/sertifikasi/page": "app/sertifikasi/page.js"
+  "/profile/edit/page": "app/profile/edit/page.js",
+  "/profile/settings/page": "app/profile/settings/page.js"
 }
