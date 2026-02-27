@@ -15,7 +15,9 @@
       "Bash(node --env-file=.env scripts/run-migration-004.js)",
       "Bash(node scripts/run-migration-006.js)",
       "Bash(pnpm install)",
-      "Bash(git push origin master)"
+      "Bash(git push origin master)",
+      "Bash(node scripts/run-migration-007.js)",
+      "Bash(node scripts/run-migration-008.js)"
     ],
     "deny": [],
     "ask": []

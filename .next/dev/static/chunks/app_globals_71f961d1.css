@@ -419,6 +419,10 @@ body {
   left: -1.5rem;
 }
 
+.-right-1\.5 {
+  right: -.375rem;
+}
+
 .-right-2 {
   right: -.5rem;
 }
@@ -429,6 +433,10 @@ body {
 
 .-right-8 {
   right: -2rem;
+}
+
+.-top-1\.5 {
+  top: -.375rem;
 }
 
 .-top-2 {
@@ -653,6 +661,10 @@ body {
   margin-top: .25rem;
 }
 
+.mt-1\.5 {
+  margin-top: .375rem;
+}
+
 .mt-16 {
   margin-top: 4rem;
 }
@@ -780,6 +792,10 @@ body {
   height: 10rem;
 }
 
+.h-5 {
+  height: 1.25rem;
+}
+
 .h-56 {
   height: 14rem;
 }
@@ -902,6 +918,10 @@ body {
 
 .w-4 {
   width: 1rem;
+}
+
+.w-5 {
+  width: 1.25rem;
 }
 
 .w-56 {
@@ -2525,6 +2545,10 @@ body {
   color: rgb(242 185 13 / var(--tw-text-opacity, 1));
 }
 
+.text-primary\/30 {
+  color: #f2b90d4d;
+}
+
 .text-primary\/40 {
   color: #f2b90d66;
 }
@@ -3261,6 +3285,10 @@ body {
 .group:hover .group-hover\:text-primary {
   --tw-text-opacity: 1;
   color: rgb(242 185 13 / var(--tw-text-opacity, 1));
+}
+
+.group:hover .group-hover\:text-primary\/60 {
+  color: #f2b90d99;
 }
 
 .group:hover .group-hover\:opacity-100 {
