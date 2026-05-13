@@ -222,6 +222,19 @@ export default function AdminPage() {
                                 <p className="text-slate-400 text-sm">Daftar asesor kompetensi</p>
                             </div>
                         </Link>
+
+                        <Link
+                            href="/admin/notifications"
+                            className="flex items-center gap-4 bg-white/5 border border-white/10 hover:bg-purple-500/10 hover:border-purple-500/50 rounded-lg p-5 transition-all group"
+                        >
+                            <div className="w-12 h-12 bg-purple-500/10 rounded-lg flex items-center justify-center group-hover:bg-purple-500/20">
+                                <span className="material-icons-outlined text-purple-400 text-2xl">notifications</span>
+                            </div>
+                            <div>
+                                <p className="text-white font-bold">Notifikasi</p>
+                                <p className="text-slate-400 text-sm">Kelola peringatan kadaluarsa</p>
+                            </div>
+                        </Link>
                     </div>
                 </div>
 
