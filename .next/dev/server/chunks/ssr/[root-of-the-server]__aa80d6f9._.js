@@ -296,9 +296,9 @@ const Beranda = ()=>{
                                             columnNumber: 33
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
-                                            alt: "Tentang LSP A3I",
+                                            alt: "Tentang LSP A3I - Alat Angkat dan Angkut",
                                             className: "relative z-10 rounded shadow-2xl border border-white/10 object-cover h-[550px] w-full",
-                                            src: "/assets/asesor.jpg"
+                                            src: "/assets/alat-berat-landing.jpg"
                                         }, void 0, false, {
                                             fileName: "[project]/app/page.jsx",
                                             lineNumber: 67,

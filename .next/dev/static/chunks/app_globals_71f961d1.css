@@ -270,7 +270,7 @@ body {
 
 .hero-gradient {
   background-color: #0000;
-  background-image: linear-gradient(#0f0f0fd9, #0f0f0ff2), url("/excavator.png");
+  background-image: linear-gradient(#0f0f0fc7, #0f0f0feb), url("/assets/alat-berat-landing.jpg");
   background-position: center;
   background-repeat: repeat, repeat;
   background-size: cover;

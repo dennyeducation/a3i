@@ -11,8 +11,8 @@
 @layer components {
   /* Beranda Utils */
   .hero-gradient {
-    background: linear-gradient(rgba(15, 15, 15, 0.85), rgba(15, 15, 15, 0.95)),
-                url('/excavator.png');
+    background: linear-gradient(rgba(15, 15, 15, 0.78), rgba(15, 15, 15, 0.92)),
+                url('/assets/alat-berat-landing.jpg');
     background-size: cover;
     background-position: center;
   }

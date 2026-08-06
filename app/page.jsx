@@ -65,9 +65,9 @@ const Beranda = () => {
                                 <div className="absolute -bottom-6 -right-6 w-32 h-32 border-r-4 border-b-4 border-primary/30 -z-0 transition-all duration-500 group-hover:border-primary/60"></div>
 
                                 <img
-                                    alt="Tentang LSP A3I"
+                                    alt="Tentang LSP A3I - Alat Angkat dan Angkut"
                                     className="relative z-10 rounded shadow-2xl border border-white/10 object-cover h-[550px] w-full"
-                                    src="/assets/asesor.jpg"
+                                    src="/assets/alat-berat-landing.jpg"
                                 />
 
                                 <div className="absolute -bottom-8 -right-8 bg-primary p-8 rounded shadow-2xl z-20 hidden md:block group-hover:-translate-y-2 transition-transform duration-300">
