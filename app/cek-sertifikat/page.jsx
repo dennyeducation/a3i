@@ -3,54 +3,25 @@
 import { useState } from 'react';
 import Link from 'next/link';
 
-// ── Demo data (replace with real API call) ──────────────────────────────────
-const DEMO_CERTIFICATES = {
-    '12345/LSP-A3I/2024': {
-        nomor: '12345/LSP-A3I/2024',
-        nama: 'Budi Santoso',
-        skema: 'Operator Mobile Crane',
-        tanggalTerbit: '10 Januari 2024',
-        tanggalBerakhir: '10 Januari 2027',
-        status: 'AKTIF',
-        tuk: 'TUK PT. Maju Konstruksi — Jakarta',
-        bnsp: 'BNSP-LSP-A3I-001',
-    },
-    '67890/LSP-A3I/2023': {
-        nomor: '67890/LSP-A3I/2023',
-        nama: 'Dewi Rahayu',
-        skema: 'Teknisi Scaffolding',
-        tanggalTerbit: '5 Maret 2023',
-        tanggalBerakhir: '5 Maret 2026',
-        status: 'AKTIF',
-        tuk: 'TUK CV. Bangun Jaya — Surabaya',
-        bnsp: 'BNSP-LSP-A3I-002',
-    },
-    '11111/LSP-A3I/2021': {
-        nomor: '11111/LSP-A3I/2021',
-        nama: 'Ahmad Fauzi',
-        skema: 'Operator Forklift',
-        tanggalTerbit: '20 Juli 2021',
-        tanggalBerakhir: '20 Juli 2024',
-        status: 'KEDALUWARSA',
-        tuk: 'TUK PT. Logistik Nusantara — Bekasi',
-        bnsp: 'BNSP-LSP-A3I-003',
-    },
+const STATUS_LABEL = {
+    active: { label: 'Aktif', cls: 'bg-green-500/15 text-green-400 border-green-500/30', dot: 'bg-green-400 animate-pulse' },
+    pending: { label: 'Pending', cls: 'bg-yellow-500/15 text-yellow-400 border-yellow-500/30', dot: 'bg-yellow-400' },
+    expired: { label: 'Kedaluwarsa', cls: 'bg-red-500/15 text-red-400 border-red-500/30', dot: 'bg-red-400' },
+    revoked: { label: 'Dicabut', cls: 'bg-red-500/15 text-red-400 border-red-500/30', dot: 'bg-red-400' },
 };
+
+function fmtDate(d) {
+    if (!d) return '—';
+    return new Date(d).toLocaleDateString('id-ID', { day: 'numeric', month: 'long', year: 'numeric' });
+}
 
 // ── Status badge ────────────────────────────────────────────────────────────
 const StatusBadge = ({ status }) => {
-    if (status === 'AKTIF') {
-        return (
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-green-500/15 text-green-400 border border-green-500/30">
-                <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse"></span>
-                Aktif
-            </span>
-        );
-    }
+    const st = STATUS_LABEL[status] || STATUS_LABEL.pending;
     return (
-        <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-red-500/15 text-red-400 border border-red-500/30">
-            <span className="w-1.5 h-1.5 rounded-full bg-red-400"></span>
-            Kedaluwarsa
+        <span className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold border ${st.cls}`}>
+            <span className={`w-1.5 h-1.5 rounded-full ${st.dot}`}></span>
+            {st.label}
         </span>
     );
 };
@@ -59,14 +30,14 @@ const StatusBadge = ({ status }) => {
 const ResultCard = ({ cert }) => (
     <div className="border border-primary/30 bg-surface-dark rounded-2xl overflow-hidden animate-fade-in">
         {/* header bar */}
-        <div className={`h-1.5 w-full ${cert.status === 'AKTIF' ? 'bg-green-500' : 'bg-red-500'}`} />
+        <div className={`h-1.5 w-full ${cert.status === 'active' ? 'bg-green-500' : 'bg-red-500'}`} />
 
         <div className="p-8">
             {/* top row */}
             <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 mb-6">
                 <div>
                     <p className="text-primary text-xs uppercase tracking-widest font-black mb-1">Nomor Sertifikat</p>
-                    <p className="text-white font-black text-xl tracking-tight">{cert.nomor}</p>
+                    <p className="text-white font-black text-xl tracking-tight">{cert.certification_number || cert.registration_no || cert.form_no}</p>
                 </div>
                 <StatusBadge status={cert.status} />
             </div>
@@ -76,12 +47,12 @@ const ResultCard = ({ cert }) => (
 
             {/* detail grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                <Detail label="Nama Pemegang" value={cert.nama} icon="person" />
-                <Detail label="Skema Sertifikasi" value={cert.skema} icon="workspace_premium" />
-                <Detail label="Tanggal Terbit" value={cert.tanggalTerbit} icon="calendar_today" />
-                <Detail label="Berlaku Hingga" value={cert.tanggalBerakhir} icon="event_available" />
-                <Detail label="TUK Pelaksana" value={cert.tuk} icon="location_on" />
-                <Detail label="Nomor Reg. BNSP" value={cert.bnsp} icon="verified" />
+                <Detail label="Nama Pemegang" value={cert.full_name || '—'} icon="person" />
+                <Detail label="Skema Sertifikasi" value={cert.scheme_name || cert.certification_type || '—'} icon="workspace_premium" />
+                <Detail label="Tanggal Terbit" value={fmtDate(cert.issued_date)} icon="calendar_today" />
+                <Detail label="Berlaku Hingga" value={fmtDate(cert.expiry_date)} icon="event_available" />
+                <Detail label="Nomor Registrasi" value={cert.registration_no || '—'} icon="verified" />
+                <Detail label="Nomor Blanko" value={cert.form_no || '—'} icon="badge" />
             </div>
 
             {/* footer note */}
@@ -147,12 +118,15 @@ export default function CekSertifikat() {
         setLoading(true);
         setQuery(trimmed);
 
-        // Simulate network delay
-        await new Promise((r) => setTimeout(r, 700));
-
-        const found = DEMO_CERTIFICATES[trimmed] ?? false;
-        setResult(found);
-        setLoading(false);
+        try {
+            const res = await fetch(`/api/certificates/verify?number=${encodeURIComponent(trimmed)}`);
+            const data = await res.json();
+            setResult(data.found ? data.data : false);
+        } catch (err) {
+            setResult(false);
+        } finally {
+            setLoading(false);
+        }
     };
 
     return (
@@ -291,30 +265,6 @@ export default function CekSertifikat() {
                                 <p className="text-white/40 text-sm leading-relaxed text-center">{desc}</p>
                             </div>
                         ))}
-                    </div>
-                </div>
-            </section>
-
-            {/* ── DEMO HINT ────────────────────────────────────────────────── */}
-            <section className="py-12 max-w-3xl mx-auto px-6">
-                <div className="p-5 rounded-xl border border-primary/20 bg-primary/5 flex flex-col sm:flex-row items-start sm:items-center gap-4">
-                    <span className="material-icons-outlined text-primary text-2xl shrink-0">lightbulb</span>
-                    <div>
-                        <p className="text-white font-bold text-sm mb-1">Coba nomor demo</p>
-                        <p className="text-white/40 text-xs leading-relaxed">
-                            Gunakan nomor berikut untuk mencoba sistem:{' '}
-                            {Object.keys(DEMO_CERTIFICATES).map((n, i) => (
-                                <span key={n}>
-                                    <button
-                                        onClick={() => { setInput(n); }}
-                                        className="text-primary font-mono hover:underline focus:outline-none"
-                                    >
-                                        {n}
-                                    </button>
-                                    {i < Object.keys(DEMO_CERTIFICATES).length - 1 && <span className="text-white/20"> &bull; </span>}
-                                </span>
-                            ))}
-                        </p>
                     </div>
                 </div>
             </section>

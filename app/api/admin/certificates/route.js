@@ -28,16 +28,27 @@ export async function GET(request) {
         let paramIndex = 1;
 
         if (search) {
+            // Ignore spaces and dashes so e.g. "123 45-LSP" matches "12345/LSP"
+            const normalizedSearch = search.replace(/[\s-]/g, '');
+
             whereClause = `WHERE (
                 c.certification_name ILIKE $${paramIndex} OR
                 c.certification_type ILIKE $${paramIndex} OR
                 c.certification_number ILIKE $${paramIndex} OR
+                c.registration_no ILIKE $${paramIndex} OR
+                c.form_no ILIKE $${paramIndex} OR
+                c.full_name ILIKE $${paramIndex} OR
                 u.username ILIKE $${paramIndex} OR
                 u.full_name ILIKE $${paramIndex} OR
-                u.email ILIKE $${paramIndex}
+                u.email ILIKE $${paramIndex} OR
+                cs.name ILIKE $${paramIndex} OR
+                cs.code ILIKE $${paramIndex} OR
+                regexp_replace(c.certification_number, '[\\s-]', '', 'g') ILIKE $${paramIndex + 1} OR
+                regexp_replace(c.registration_no, '[\\s-]', '', 'g') ILIKE $${paramIndex + 1} OR
+                regexp_replace(c.form_no, '[\\s-]', '', 'g') ILIKE $${paramIndex + 1}
             )`;
-            params.push(`%${search}%`);
-            paramIndex++;
+            params.push(`%${search}%`, `%${normalizedSearch}%`);
+            paramIndex += 2;
         }
 
         if (status) {
@@ -52,6 +63,7 @@ export async function GET(request) {
             SELECT COUNT(*) as total
             FROM certifications c
             LEFT JOIN users u ON c.user_id = u.id
+            LEFT JOIN certification_schemes cs ON c.scheme_id = cs.id
             ${whereClause}
         `;
         const countResult = await query(countQuery, params);
@@ -64,9 +76,12 @@ export async function GET(request) {
                 c.*,
                 u.username,
                 u.email,
-                u.full_name as user_full_name
+                u.full_name as user_full_name,
+                cs.name as scheme_name,
+                cs.code as scheme_code
             FROM certifications c
             LEFT JOIN users u ON c.user_id = u.id
+            LEFT JOIN certification_schemes cs ON c.scheme_id = cs.id
             ${whereClause}
             ORDER BY c.created_at DESC
             LIMIT $${paramIndex} OFFSET $${paramIndex + 1}
@@ -110,9 +125,13 @@ export async function POST(request) {
         const body = await request.json();
         const {
             user_id,
+            scheme_id,
             certification_name,
             certification_type,
             certification_number,
+            registration_no,
+            form_no,
+            full_name,
             status,
             issued_date,
             expiry_date,
@@ -140,6 +159,21 @@ export async function POST(request) {
             );
         }
 
+        // Check if scheme exists (if provided)
+        if (scheme_id) {
+            const schemeCheck = await query(
+                'SELECT id FROM certification_schemes WHERE id = $1',
+                [scheme_id]
+            );
+
+            if (schemeCheck.rows.length === 0) {
+                return NextResponse.json(
+                    { error: 'Skema sertifikasi tidak ditemukan' },
+                    { status: 404 }
+                );
+            }
+        }
+
         // Check if certification number is unique (if provided)
         if (certification_number) {
             const certCheck = await query(
@@ -155,25 +189,63 @@ export async function POST(request) {
             }
         }
 
+        // Check if registration number is unique (if provided)
+        if (registration_no) {
+            const regCheck = await query(
+                'SELECT id FROM certifications WHERE registration_no = $1',
+                [registration_no]
+            );
+
+            if (regCheck.rows.length > 0) {
+                return NextResponse.json(
+                    { error: 'Nomor registrasi sudah digunakan' },
+                    { status: 400 }
+                );
+            }
+        }
+
+        // Check if form number is unique (if provided)
+        if (form_no) {
+            const formCheck = await query(
+                'SELECT id FROM certifications WHERE form_no = $1',
+                [form_no]
+            );
+
+            if (formCheck.rows.length > 0) {
+                return NextResponse.json(
+                    { error: 'Nomor blanko sudah digunakan' },
+                    { status: 400 }
+                );
+            }
+        }
+
         // Insert certificate
         const result = await query(
             `INSERT INTO certifications (
                 user_id,
+                scheme_id,
                 certification_name,
                 certification_type,
                 certification_number,
+                registration_no,
+                form_no,
+                full_name,
                 status,
                 issued_date,
                 expiry_date,
                 score
             )
-            VALUES ($1, $2, $3, $4, $5, $6, $7, $8)
+            VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12)
             RETURNING *`,
             [
                 user_id,
+                scheme_id || null,
                 certification_name,
                 certification_type,
                 certification_number || null,
+                registration_no || null,
+                form_no || null,
+                full_name || null,
                 status || 'pending',
                 issued_date || null,
                 expiry_date || null,

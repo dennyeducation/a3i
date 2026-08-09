@@ -10,7 +10,7 @@ export async function GET(request, { params }) {
         return NextResponse.json({ error: auth.error }, { status: auth.authenticated ? 403 : 401 });
 
     try {
-        const { id } = params;
+        const { id } = await params;
 
         // Data profil
         const profil = await query(
@@ -28,7 +28,8 @@ export async function GET(request, { params }) {
 
         // Sertifikat milik asesi
         const sertifikat = await query(
-            `SELECT c.id, c.certification_name, c.certification_number, c.status,
+            `SELECT c.id, c.certification_name, c.certification_number,
+                    c.registration_no, c.form_no, c.full_name, c.status,
                     c.issued_date, c.expiry_date, c.score,
                     cs.name AS scheme_name, cs.code AS scheme_code
              FROM certifications c
@@ -73,7 +74,7 @@ export async function PUT(request, { params }) {
         return NextResponse.json({ error: auth.error }, { status: auth.authenticated ? 403 : 401 });
 
     try {
-        const { id } = params;
+        const { id } = await params;
         const body = await request.json();
         const {
             full_name, email, username, is_active, password,
@@ -147,9 +148,10 @@ export async function DELETE(request, { params }) {
         return NextResponse.json({ error: auth.error }, { status: auth.authenticated ? 403 : 401 });
 
     try {
+        const { id } = await params;
         const result = await query(
             "DELETE FROM users WHERE id = $1 AND role = 'ASESI' RETURNING id",
-            [params.id]
+            [id]
         );
         if (!result.rows.length)
             return NextResponse.json({ error: 'Asesi tidak ditemukan' }, { status: 404 });

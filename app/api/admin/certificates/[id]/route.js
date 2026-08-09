@@ -15,16 +15,19 @@ export async function GET(request, { params }) {
     }
 
     try {
-        const { id } = params;
+        const { id } = await params;
 
         const result = await query(
             `SELECT
                 c.*,
                 u.username,
                 u.email,
-                u.full_name as user_full_name
+                u.full_name as user_full_name,
+                cs.name as scheme_name,
+                cs.code as scheme_code
             FROM certifications c
             LEFT JOIN users u ON c.user_id = u.id
+            LEFT JOIN certification_schemes cs ON c.scheme_id = cs.id
             WHERE c.id = $1`,
             [id]
         );
@@ -62,7 +65,7 @@ export async function PUT(request, { params }) {
     }
 
     try {
-        const { id } = params;
+        const { id } = await params;
         const body = await request.json();
 
         // Check if certificate exists
@@ -84,14 +87,33 @@ export async function PUT(request, { params }) {
         let paramIndex = 1;
 
         const allowedFields = [
+            'scheme_id',
             'certification_name',
             'certification_type',
             'certification_number',
+            'registration_no',
+            'form_no',
+            'full_name',
             'status',
             'issued_date',
             'expiry_date',
             'score'
         ];
+
+        // Check if scheme exists (if being updated)
+        if (body.scheme_id) {
+            const schemeCheck = await query(
+                'SELECT id FROM certification_schemes WHERE id = $1',
+                [body.scheme_id]
+            );
+
+            if (schemeCheck.rows.length === 0) {
+                return NextResponse.json(
+                    { error: 'Skema sertifikasi tidak ditemukan' },
+                    { status: 404 }
+                );
+            }
+        }
 
         for (const field of allowedFields) {
             if (body[field] !== undefined) {
@@ -118,6 +140,36 @@ export async function PUT(request, { params }) {
             if (numberCheck.rows.length > 0) {
                 return NextResponse.json(
                     { error: 'Certification number already exists' },
+                    { status: 400 }
+                );
+            }
+        }
+
+        // Check registration number uniqueness if being updated
+        if (body.registration_no && body.registration_no !== certCheck.rows[0].registration_no) {
+            const regCheck = await query(
+                'SELECT id FROM certifications WHERE registration_no = $1 AND id != $2',
+                [body.registration_no, id]
+            );
+
+            if (regCheck.rows.length > 0) {
+                return NextResponse.json(
+                    { error: 'Nomor registrasi sudah digunakan' },
+                    { status: 400 }
+                );
+            }
+        }
+
+        // Check form number uniqueness if being updated
+        if (body.form_no && body.form_no !== certCheck.rows[0].form_no) {
+            const formCheck = await query(
+                'SELECT id FROM certifications WHERE form_no = $1 AND id != $2',
+                [body.form_no, id]
+            );
+
+            if (formCheck.rows.length > 0) {
+                return NextResponse.json(
+                    { error: 'Nomor blanko sudah digunakan' },
                     { status: 400 }
                 );
             }
@@ -165,7 +217,7 @@ export async function DELETE(request, { params }) {
     }
 
     try {
-        const { id } = params;
+        const { id } = await params;
 
         // Check if certificate exists
         const certCheck = await query(

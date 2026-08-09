@@ -571,9 +571,17 @@ export default function AdminAsesiPage() {
                                             <div className="flex items-start justify-between gap-3">
                                                 <div>
                                                     <p className="text-white font-medium text-sm">{s.certification_name}</p>
+                                                    {s.full_name && <p className="text-gray-400 text-xs mt-0.5">a.n. {s.full_name}</p>}
                                                     {s.scheme_name && <p className="text-gray-400 text-xs mt-0.5">{s.scheme_name}</p>}
                                                     {s.certification_number && (
                                                         <p className="text-gray-500 text-xs mt-1 font-mono">{s.certification_number}</p>
+                                                    )}
+                                                    {(s.registration_no || s.form_no) && (
+                                                        <p className="text-gray-500 text-xs mt-0.5 font-mono">
+                                                            {s.registration_no && <>Reg: {s.registration_no}</>}
+                                                            {s.registration_no && s.form_no && ' · '}
+                                                            {s.form_no && <>Blanko: {s.form_no}</>}
+                                                        </p>
                                                     )}
                                                 </div>
                                                 <span className={`px-2 py-1 rounded-full text-xs font-medium flex-shrink-0 ${STATUS_COLORS[s.status] || STATUS_COLORS.pending}`}>

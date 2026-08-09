@@ -1,5 +1,16 @@
-[00:00:01.745] Server  LOG     ✓ Ready in 1205ms
-[00:00:24.351] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:24.624] Browser WARN    Image with src "/assets/logoa3i.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
-[00:00:26.584] Browser WARN    Image with src "/assets/logobnsp.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
-[00:00:26.584] Browser WARN    Image with src "/assets/kemnaker.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:00:01.817] Server  LOG     ✓ Ready in 1276ms
+[00:00:12.603] Server  LOG     ○ Compiling /cek-sertifikat ...
+[00:00:15.059] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:15.570] Server  ERROR   (node:2752) Warning: SECURITY WARNING: The SSL modes 'prefer', 'require', and 'verify-ca' are treated as aliases for 'verify-full'.
+In the next major version (pg-connection-string v3.0.0 and pg v9.0.0), these modes will adopt standard libpq semantics, which have weaker security guarantees.
+
+To prepare for this change:
+- If you want the current behavior, explicitly use 'sslmode=verify-full'
+- If you want libpq compatibility now, use 'uselibpqcompat=true&sslmode=require'
+
+See https://www.postgresql.org/docs/current/libpq-ssl.html for libpq SSL mode definitions.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[00:00:15.571] Browser WARN    Image with src "/assets/logoa3i.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:00:17.404] Server  LOG     Database connected successfully
+[00:00:17.497] Server  LOG     Executed query {}
+[00:00:21.545] Server  LOG     Executed query {}

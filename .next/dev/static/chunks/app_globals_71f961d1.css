@@ -868,6 +868,14 @@ body {
   height: 1px;
 }
 
+.max-h-40 {
+  max-height: 10rem;
+}
+
+.max-h-56 {
+  max-height: 14rem;
+}
+
 .max-h-\[520px\] {
   max-height: 520px;
 }
@@ -1944,6 +1952,11 @@ body {
   background-color: #ffffff0d;
 }
 
+.bg-yellow-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(250 204 21 / var(--tw-bg-opacity, 1));
+}
+
 .bg-yellow-500\/10 {
   background-color: #eab3081a;
 }
@@ -2717,6 +2730,11 @@ body {
   color: #fffc;
 }
 
+.text-yellow-300 {
+  --tw-text-opacity: 1;
+  color: rgb(253 224 71 / var(--tw-text-opacity, 1));
+}
+
 .text-yellow-400 {
   --tw-text-opacity: 1;
   color: rgb(250 204 21 / var(--tw-text-opacity, 1));
@@ -2735,6 +2753,10 @@ body {
 .text-zinc-500 {
   --tw-text-opacity: 1;
   color: rgb(113 113 122 / var(--tw-text-opacity, 1));
+}
+
+.underline {
+  text-decoration-line: underline;
 }
 
 .placeholder-slate-500::placeholder {
@@ -2915,6 +2937,46 @@ body {
 
 .duration-700 {
   transition-duration: .7s;
+}
+
+.file\:mr-3::file-selector-button {
+  margin-right: .75rem;
+}
+
+.file\:cursor-pointer::file-selector-button {
+  cursor: pointer;
+}
+
+.file\:rounded-md::file-selector-button {
+  border-radius: .375rem;
+}
+
+.file\:border-0::file-selector-button {
+  border-width: 0;
+}
+
+.file\:bg-primary::file-selector-button {
+  --tw-bg-opacity: 1;
+  background-color: rgb(242 185 13 / var(--tw-bg-opacity, 1));
+}
+
+.file\:px-3::file-selector-button {
+  padding-left: .75rem;
+  padding-right: .75rem;
+}
+
+.file\:py-1\.5::file-selector-button {
+  padding-top: .375rem;
+  padding-bottom: .375rem;
+}
+
+.file\:font-bold::file-selector-button {
+  font-weight: 700;
+}
+
+.file\:text-background-dark::file-selector-button {
+  --tw-text-opacity: 1;
+  color: rgb(15 15 15 / var(--tw-text-opacity, 1));
 }
 
 .placeholder\:text-slate-600::placeholder {
@@ -3464,10 +3526,6 @@ body {
 
   .sm\:items-start {
     align-items: flex-start;
-  }
-
-  .sm\:items-center {
-    align-items: center;
   }
 
   .sm\:justify-between {
