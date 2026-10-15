@@ -1,5 +1,13 @@
 {
-  "/api/auth/me/route": "app/api/auth/me/route.js",
-  "/api/certificates/verify/route": "app/api/certificates/verify/route.js",
-  "/cek-sertifikat/page": "app/cek-sertifikat/page.js"
+  "/admin/organisasi/page": "app/admin/organisasi/page.js",
+  "/admin/page": "app/admin/page.js",
+  "/api/admin/organisasi/[id]/route": "app/api/admin/organisasi/[id]/route.js",
+  "/api/admin/organisasi/route": "app/api/admin/organisasi/route.js",
+  "/api/admin/stats/route": "app/api/admin/stats/route.js",
+  "/api/admin/users/route": "app/api/admin/users/route.js",
+  "/api/auth/login/route": "app/api/auth/login/route.js",
+  "/api/organisasi/route": "app/api/organisasi/route.js",
+  "/login/page": "app/login/page.js",
+  "/page": "app/page.js",
+  "/profil/page": "app/profil/page.js"
 }

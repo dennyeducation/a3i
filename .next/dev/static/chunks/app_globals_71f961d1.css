@@ -569,6 +569,10 @@ body {
   margin-top: -4rem;
 }
 
+.-mt-2 {
+  margin-top: -.5rem;
+}
+
 .-mt-8 {
   margin-top: -2rem;
 }
@@ -938,6 +942,10 @@ body {
 
 .w-4 {
   width: 1rem;
+}
+
+.w-40 {
+  width: 10rem;
 }
 
 .w-5 {
@@ -1832,6 +1840,10 @@ body {
   background-color: #f973161a;
 }
 
+.bg-pink-500\/10 {
+  background-color: #ec48991a;
+}
+
 .bg-primary {
   --tw-bg-opacity: 1;
   background-color: rgb(242 185 13 / var(--tw-bg-opacity, 1));
@@ -2183,6 +2195,11 @@ body {
 .py-1\.5 {
   padding-top: .375rem;
   padding-bottom: .375rem;
+}
+
+.py-10 {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
 }
 
 .py-12 {
@@ -2635,6 +2652,11 @@ body {
   color: rgb(251 146 60 / var(--tw-text-opacity, 1));
 }
 
+.text-pink-400 {
+  --tw-text-opacity: 1;
+  color: rgb(244 114 182 / var(--tw-text-opacity, 1));
+}
+
 .text-primary {
   --tw-text-opacity: 1;
   color: rgb(242 185 13 / var(--tw-text-opacity, 1));
@@ -3042,6 +3064,10 @@ body {
   border-color: #f9731680;
 }
 
+.hover\:border-pink-500\/50:hover {
+  border-color: #ec489980;
+}
+
 .hover\:border-primary:hover {
   --tw-border-opacity: 1;
   border-color: rgb(242 185 13 / var(--tw-border-opacity, 1));
@@ -3129,6 +3155,10 @@ body {
 
 .hover\:bg-orange-500\/10:hover {
   background-color: #f973161a;
+}
+
+.hover\:bg-pink-500\/10:hover {
+  background-color: #ec48991a;
 }
 
 .hover\:bg-primary:hover {
@@ -3438,6 +3468,10 @@ body {
 
 .group:hover .group-hover\:bg-orange-500\/20 {
   background-color: #f9731633;
+}
+
+.group:hover .group-hover\:bg-pink-500\/20 {
+  background-color: #ec489933;
 }
 
 .group:hover .group-hover\:bg-primary {

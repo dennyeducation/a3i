@@ -1,4 +1,25 @@
+'use client';
+
+import { useEffect, useState } from 'react';
+
 const ProfilLembaga = () => {
+    const [orgMembers, setOrgMembers] = useState([]);
+    const [orgLoading, setOrgLoading] = useState(true);
+
+    useEffect(() => {
+        fetch('/api/organisasi')
+            .then(res => res.json())
+            .then(data => { if (data.success) setOrgMembers(data.data); })
+            .catch(() => {})
+            .finally(() => setOrgLoading(false));
+    }, []);
+
+    const orgLevels = orgMembers.reduce((acc, m) => {
+        (acc[m.level] = acc[m.level] || []).push(m);
+        return acc;
+    }, {});
+    const levelKeys = Object.keys(orgLevels).map(Number).sort((a, b) => a - b);
+
     return (
         <>
             <section className="relative pt-24 pb-20 border-b border-white/5">
@@ -107,41 +128,56 @@ const ProfilLembaga = () => {
                         <div className="w-16 h-[2px] bg-primary mx-auto mt-6"></div>
                     </div>
                     <div className="max-w-4xl mx-auto overflow-x-auto pb-10">
-                        <div className="min-w-[700px] flex flex-col items-center">
-                            <div className="flex flex-col items-center">
-                                <div className="p-5 border border-primary bg-primary/5 min-w-[240px] text-center">
-                                    <p className="text-primary text-[9px] font-bold uppercase tracking-widest mb-1">Dewan Pengarah</p>
-                                    <h5 className="text-base font-bold text-white">Priyono</h5>
-                                </div>
-                                <div className="w-[1px] bg-primary/40 h-8 mx-auto"></div>
+                        {orgLoading ? (
+                            <div className="flex justify-center py-10">
+                                <span className="material-icons-outlined text-primary text-4xl animate-spin">refresh</span>
                             </div>
-                            <div className="flex flex-col items-center">
-                                <div className="p-5 border border-primary bg-primary/5 min-w-[240px] text-center">
-                                    <p className="text-primary text-[9px] font-bold uppercase tracking-widest mb-1">Ketua LSP</p>
-                                    <h5 className="text-base font-bold text-white">I Made Karmayoga</h5>
-                                </div>
-                                <div className="w-[1px] bg-primary/40 h-10 mx-auto"></div>
-                            </div>
-                            <div className="w-full relative px-10">
-                                <div className="h-[1px] bg-primary/40 absolute top-0 left-[12.5%] right-[12.5%]"></div>
-                                <div className="grid grid-cols-4 gap-4 pt-8">
-                                    {[
-                                        { role: 'Manajer Sertifikasi', name: 'Dewi Lestari' },
-                                        { role: 'Manajer Mutu', name: 'Bambang S.' },
-                                        { role: 'Manajer Adm & Keu', name: 'Siti Aminah' },
-                                        { role: 'Komite Teknis', name: 'Agus Wahyudi' },
-                                    ].map((person) => (
-                                        <div key={person.role} className="flex flex-col items-center relative">
-                                            <div className="w-[1px] bg-primary/40 h-8 absolute -top-8"></div>
-                                            <div className="p-4 border border-white/10 bg-zinc-900 w-full text-center">
-                                                <p className="text-slate-500 text-[8px] font-bold uppercase tracking-widest mb-1">{person.role}</p>
-                                                <h5 className="text-xs font-bold text-white">{person.name}</h5>
+                        ) : levelKeys.length === 0 ? (
+                            <p className="text-slate-500 text-center py-10">Data struktur organisasi belum tersedia.</p>
+                        ) : (
+                            <div className="min-w-[700px] flex flex-col items-center">
+                                {levelKeys.map((level, i) => {
+                                    const people = orgLevels[level];
+                                    const isLast = i === levelKeys.length - 1;
+
+                                    if (people.length === 1) {
+                                        const person = people[0];
+                                        return (
+                                            <div key={level} className="flex flex-col items-center">
+                                                <div className="p-5 border border-primary bg-primary/5 min-w-[240px] text-center">
+                                                    {person.photo && (
+                                                        <img src={person.photo} alt={person.name} className="w-14 h-14 rounded-full object-cover mx-auto mb-3 border border-primary/40" />
+                                                    )}
+                                                    <p className="text-primary text-[9px] font-bold uppercase tracking-widest mb-1">{person.position}</p>
+                                                    <h5 className="text-base font-bold text-white">{person.name}</h5>
+                                                </div>
+                                                {!isLast && <div className="w-[1px] bg-primary/40 h-8 mx-auto"></div>}
+                                            </div>
+                                        );
+                                    }
+
+                                    return (
+                                        <div key={level} className="w-full relative px-10">
+                                            <div className="h-[1px] bg-primary/40 absolute top-0 left-[12.5%] right-[12.5%]"></div>
+                                            <div className="flex flex-wrap justify-center gap-4 pt-8">
+                                                {people.map((person) => (
+                                                    <div key={person.id} className="flex flex-col items-center relative w-40">
+                                                        <div className="w-[1px] bg-primary/40 h-8 absolute -top-8"></div>
+                                                        <div className="p-4 border border-white/10 bg-zinc-900 w-full text-center">
+                                                            {person.photo && (
+                                                                <img src={person.photo} alt={person.name} className="w-10 h-10 rounded-full object-cover mx-auto mb-2 border border-white/10" />
+                                                            )}
+                                                            <p className="text-slate-500 text-[8px] font-bold uppercase tracking-widest mb-1">{person.position}</p>
+                                                            <h5 className="text-xs font-bold text-white">{person.name}</h5>
+                                                        </div>
+                                                    </div>
+                                                ))}
                                             </div>
                                         </div>
-                                    ))}
-                                </div>
+                                    );
+                                })}
                             </div>
-                        </div>
+                        )}
                         <div className="mt-16 text-center">
                             <p className="text-slate-500 text-sm italic font-light max-w-xl mx-auto">
                                 &quot;LSP A3I didukung oleh tim ahli yang berdedikasi tinggi dan memiliki sertifikasi sebagai Asesor Kompetensi yang kredibel di bidangnya masing-masing.&quot;

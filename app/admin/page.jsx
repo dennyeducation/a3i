@@ -235,6 +235,19 @@ export default function AdminPage() {
                                 <p className="text-slate-400 text-sm">Kelola peringatan kadaluarsa</p>
                             </div>
                         </Link>
+
+                        <Link
+                            href="/admin/organisasi"
+                            className="flex items-center gap-4 bg-white/5 border border-white/10 hover:bg-pink-500/10 hover:border-pink-500/50 rounded-lg p-5 transition-all group"
+                        >
+                            <div className="w-12 h-12 bg-pink-500/10 rounded-lg flex items-center justify-center group-hover:bg-pink-500/20">
+                                <span className="material-icons-outlined text-pink-400 text-2xl">account_tree</span>
+                            </div>
+                            <div>
+                                <p className="text-white font-bold">Struktur Organisasi</p>
+                                <p className="text-slate-400 text-sm">Kelola susunan pengurus LSP</p>
+                            </div>
+                        </Link>
                     </div>
                 </div>
 
